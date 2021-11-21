@@ -1,7 +1,9 @@
 # Pro-Gramme
+
 Devoir pour le cours Interfaces et multimédia. Interface d'un site web pour une compagnie de suppléments alimentaires pour athlète nommée Pro-Gramme
 
 ## Énoncé
+
 La compagnie Pro-Gramme prend de l’expansion à un rythme soutenu est souhaite
 maintenant étoffer sa vitrine web avec une section de commerce électronique. Vous êtes
 chargé.es de concevoir et d’implémenter les interfaces se rattachant à cette section. Plus
