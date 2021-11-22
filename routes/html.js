@@ -1,5 +1,5 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 
 var router = express.Router();
 
@@ -9,16 +9,20 @@ var router = express.Router();
  * paramètre req représente la requête courante et res représente la réponse. La réponse retourne le fichier html demandé.
  * Votre fichier devrait être dans le dossier client.
  */
-router.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + '/../client/accueil.html'));
+router.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/accueil.html"));
 });
 
-router.get('/inscription', function(req, res){
-    res.sendFile(path.join(__dirname + '/../client/inscription.html'));
+router.get("/inscription", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/inscription.html"));
 });
 
-router.get('/points_de_vente', function(req, res){
-    res.sendFile(path.join(__dirname + '/../client/points_de_vente.html'));
+router.get("/points_de_vente", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/points_de_vente.html"));
 });
 
-module.exports = router
+router.get("/produits", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/produits.html"));
+});
+
+module.exports = router;
