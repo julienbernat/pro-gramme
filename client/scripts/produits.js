@@ -38,13 +38,6 @@ function chargerproduits() {
 
 function ajouteraupanier(idProduit) {
   const produit = { idProduit: idProduit, quantite: 1 };
-  const init = {
-    method: "POST",
-    body: JSON.stringify(produit),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  };
   if (!window.usager) {
     afficherMessage(
       "Vous devez être connecté pour ajouter un item à votre panier",
@@ -52,6 +45,14 @@ function ajouteraupanier(idProduit) {
     );
     return;
   }
+  const init = {
+    method: "POST",
+    body: JSON.stringify(produit),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer: ${window.usager.token}`,
+    },
+  };
   fetch(`/clients/${window.usager.id}/panier`, init)
     .then((reponse) => {
       console.log({ reponse });

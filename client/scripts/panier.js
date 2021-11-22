@@ -1,3 +1,5 @@
+const mockData = {};
+
 function genererPanier(data) {
   console.log({ data });
   let produits = document.getElementById("prod-grille");
@@ -27,7 +29,14 @@ function genererPanier(data) {
 }
 
 function chargerpanier() {
-  fetch("./clients/" + window.usager.id + "/panier")
+  const init = {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer: ${window.usager.token}`,
+    },
+  };
+  fetch("./clients/" + window.usager.id + "/panier", init)
     .then((produits) => {
       return produits.json();
     })
