@@ -1,5 +1,5 @@
 function genererProduit(data) {
-  let locaux = document.getElementById("prod-grille");
+  let produits = document.getElementById("prod-grille");
 
   let innerHTML = "";
   for (let indice in data) {
@@ -14,13 +14,18 @@ function genererProduit(data) {
       "</address>" +
       "<h2>Prix : " +
       element.prix +
-      "$";
-    "</h2>" + "<ul>";
-
-    innerHTML += "</ul></article>";
+      "$" +
+      "</h2>" +
+      "<p>Quantité restant : " +
+      element.qte_inventaire +
+      "</p>" +
+      '<button onclick="ajouteraupanier(' +
+      element.id +
+      ')">Ajouter au panier</button>';
+    innerHTML += "</article>";
   }
 
-  locaux.innerHTML = innerHTML;
+  produits.innerHTML = innerHTML;
 }
 
 function chargerproduits() {
@@ -29,4 +34,43 @@ function chargerproduits() {
       return produits.json();
     })
     .then((data) => genererProduit(data));
+}
+
+function ajouteraupanier(idProduit) {
+  const produit = { idProduit: idProduit, quantite: 1 };
+  const init = {
+    method: "POST",
+    body: JSON.stringify(produit),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  };
+  if (!window.usager) {
+    afficherMessage(
+      "Vous devez être connecté pour ajouter un item à votre panier",
+      "negatif"
+    );
+    return;
+  }
+  fetch(`/clients/${window.usager.id}/panier`, init)
+    .then((reponse) => {
+      console.log({ reponse });
+      if (reponse.ok) {
+        return reponse.json();
+      } else {
+        return reponse.text();
+      }
+    })
+    .then((json) => {
+      if (typeof json === "object" && json !== null) {
+        console.log("Reussi");
+        afficherMessage("Ajouter au panier", "positif");
+      } else {
+        console.log(json);
+        afficherMessage(`Erreur: ${json}`, "negatif");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }

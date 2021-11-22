@@ -30,6 +30,23 @@ function remplacerContenu(idElement, contenu) {
 }
 
 /**
+ * Fonction qui vérifie si l'utilisateur peut accéder à cette page.
+ *  Si l'utilisateur n'est pas connecté il ne peux pas accéder à la page panier.
+ */
+function estPermis(hash) {
+  if (hash === "#/panier") {
+    if (!window.usager || (!window.usager.id && window.usager.id != 0)) {
+      afficherMessage(
+        "Vous devez être connecté pour accéder à votre panier",
+        "negatif"
+      );
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
  * Fonction pour gérer la navigation entre les pages. Vous ne devriez pas avoir besoin de la modifier
  * @returns {Promise<void>} Ne retourne rien
  */
@@ -40,6 +57,9 @@ async function hashHandler() {
 
   if (!hash.includes("/")) {
     console.log("Le hash est une ancre, ne rien faire");
+    return;
+  }
+  if (!estPermis(hash)) {
     return;
   }
   //On crée le lien vers le contenu qu'on veut charger

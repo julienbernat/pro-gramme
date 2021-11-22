@@ -9,8 +9,17 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 0,
-            "items": []
+            "valeur": 99.04,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 1,
+                    "nomProduit": "Tomate",
+                    "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+                    "prix": 24.76,
+                    "quantite": 4
+                }
+            ]
         },
         "historique": [
             {
@@ -107,6 +116,30 @@
         "panier": {
             "valeur": 0,
             "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 6,
+        "prenom": "Julien",
+        "nom": "Bernat ",
+        "age": 22,
+        "adresse": "299 rue High",
+        "pays": "Canda",
+        "courriel": "jul.b@outlook.com",
+        "mdp": "$2b$08$J09Ima1GRm.KSzFPPbxG6.lGnjqrgvrW7dOPA2n5EY.YijL4l.KJS",
+        "panier": {
+            "valeur": 99.04,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 1,
+                    "nomProduit": "Tomate",
+                    "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+                    "prix": 24.76,
+                    "quantite": 4
+                }
+            ]
         },
         "historique": []
     }
