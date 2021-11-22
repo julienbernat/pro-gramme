@@ -1,0 +1,9 @@
+#texte-acceuil img {
+  float: right;
+  height: 150px;
+}
+
+#texte-acceuil {
+  width: 66%;
+  margin-left: 34%;
+}

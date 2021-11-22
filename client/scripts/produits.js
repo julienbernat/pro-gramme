@@ -1,6 +1,5 @@
 function genererProduit(data) {
   let locaux = document.getElementById("prod-grille");
-  console.log({ data });
 
   let innerHTML = "";
   for (let indice in data) {
@@ -13,8 +12,10 @@ function genererProduit(data) {
       "<address>" +
       element.description +
       "</address>" +
-      "<h2>Prix: </h2>" +
-      "<ul>";
+      "<h2>Prix : " +
+      element.prix +
+      "$";
+    "</h2>" + "<ul>";
 
     innerHTML += "</ul></article>";
   }
