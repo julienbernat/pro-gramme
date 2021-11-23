@@ -1,13 +1,13 @@
-function sinscrire() {
+function envoyer() {
   const formulaire = new FormData(document.getElementById("formulaire-caisse"));
-  const corps = JSON.stringify(Object.fromEntries(formulaire));
-  console.log(corps);
+  const corps = Object.fromEntries(formulaire);
+  const body = { ...corps, idClient: window.PushManager.id };
   const init = {
     method: "POST",
-    body: corps,
+    body: JSON.stringify(body),
     headers: { "Content-type": "application/json; charset=UTF-8" },
   };
-  fetch("/clients", init)
+  fetch("/ventes", init)
     .then((reponse) => {
       if (reponse.ok) {
         return reponse.json();
@@ -18,7 +18,6 @@ function sinscrire() {
     .then((json) => {
       if (typeof json === "object" && json !== null) {
         console.log("Reussi");
-        afficherMessage("Inscription réussie!", "positif");
       } else {
         console.log(json);
         afficherMessage(`Erreur: ${json}`, "negatif");
@@ -34,7 +33,7 @@ function sinscrire() {
  * Remplace le DOMContentLoaded qui est lancé bien avant que le contenu associé à ce script ne soit dans l'écran.
  * @returns {Promise<void>}
  */
-async function chargerinscription() {
-  const btnInscription = document.getElementById("btn-sinscrire");
-  btnInscription.addEventListener("click", sinscrire);
+function chargercaisse() {
+  const btnCaisse = document.getElementById("btn-envoyer");
+  btnCaisse.addEventListener("click", envoyer);
 }
