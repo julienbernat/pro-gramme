@@ -25,6 +25,12 @@
   text-align: left;
 }
 
+.panier-item input {
+  font-size: medium;
+  text-align: left;
+  align-items: center;
+}
+
 .panier-item p {
   text-align: left;
 }
