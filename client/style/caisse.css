@@ -1,0 +1,46 @@
+#section-caisse {
+  width: 66%;
+  margin-left: 34%;
+}
+
+#table-caisse {
+  border-collapse: collapse;
+  margin: 25px 25px 25px 0;
+}
+
+#table-caisse caption {
+  font-size: x-large;
+}
+
+#table-caisse td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#adresse-livraison input {
+  width: 30%;
+}
+
+.submit-group input[type="submit"] {
+  width: 150px;
+}
+.submit-group {
+  max-width: 500px;
+  text-align: right;
+  padding: 14px 0px 14px 28px;
+}
+
+form .group {
+  margin-bottom: 20px;
+}
+
+form .group label {
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+  text-align: right;
+}
+
+form .group select {
+  width: 32%;
+}

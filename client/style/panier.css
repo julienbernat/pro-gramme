@@ -1,4 +1,6 @@
-#section-panier {
+#button {
+  position: absolute;
+  right: 20px;
 }
 
 #panier-grille {
