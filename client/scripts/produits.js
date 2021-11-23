@@ -24,7 +24,6 @@ function genererProduit(data) {
       ')">Ajouter au panier</button>';
     innerHTML += "</article>";
   }
-
   produits.innerHTML = innerHTML;
 }
 

@@ -129,7 +129,7 @@
         "courriel": "jul.b@outlook.com",
         "mdp": "$2b$08$J09Ima1GRm.KSzFPPbxG6.lGnjqrgvrW7dOPA2n5EY.YijL4l.KJS",
         "panier": {
-            "valeur": 148.56,
+            "valeur": 150.79,
             "items": [
                 {
                     "id": 0,
@@ -145,6 +145,14 @@
                     "nomProduit": "Banane",
                     "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
                     "prix": 24.76,
+                    "quantite": 1
+                },
+                {
+                    "id": 2,
+                    "idProduit": 2,
+                    "nomProduit": "concombre",
+                    "descriptionProduit": "pas un jouet",
+                    "prix": 2.23,
                     "quantite": 1
                 }
             ]

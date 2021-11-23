@@ -1,31 +1,57 @@
-const mockData = {};
-
 function genererPanier(data) {
-  console.log({ data });
-  let produits = document.getElementById("prod-grille");
+  let produits = document.getElementById("panier-grille");
+  let total = document.getElementById("panier-total");
 
-  let innerHTML = "";
-  for (let indice in data) {
-    let element = data[indice];
-    innerHTML +=
-      '<article class="prod-item">' +
+  for (let indice in data.items) {
+    let element = data.items[indice];
+    produits.innerHTML +=
+      '<article class="panier-item">' +
+      "<ul>" +
       "<h1>" +
-      element.nom +
+      element.nomProduit +
       "</h1>" +
       "<address>" +
-      element.description +
+      element.descriptionProduit +
       "</address>" +
+      "</ul>" +
+      "<ul>" +
+      "<h2>Quantité : " +
+      element.quantite +
+      "</h2>" +
+      "</ul>" +
+      "<ul>" +
       "<h2>Prix : " +
       element.prix +
       "$" +
       "</h2>" +
-      "<p>Quantité restant : " +
-      element.qte_inventaire +
-      "</p>" +
-      "<button>Ajouter au panier</button>";
-    innerHTML += "</article>";
+      "</ul>" +
+      "</ul>" +
+      "<ul>" +
+      "<h2>Prix total : " +
+      (element.prix * element.quantite).toFixed(2) +
+      "$" +
+      "</h2>" +
+      "</article>";
   }
-  produits.innerHTML = innerHTML;
+
+  total.innerHTML +=
+    '<article class="panier-item">' +
+    "<ul>" +
+    "</ul>" +
+    "<ul>" +
+    "</ul>" +
+    "<ul>" +
+    "<h1 >" +
+    "TOTAL" +
+    "</h1>" +
+    "</ul>" +
+    "<ul>" +
+    "<h2>Prix total : " +
+    data.valeur +
+    "$" +
+    "</h2>" +
+    "</ul>" +
+    "</article>";
 }
 
 function chargerpanier() {
