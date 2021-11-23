@@ -8,7 +8,7 @@
 
 .panier-item {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
 }
 
 .panier-item h1 {
@@ -42,7 +42,7 @@
 
 .barre-header {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
 }
 
 .barre-header h2 {

@@ -32,13 +32,19 @@ function genererPanier(data) {
       "$" +
       "</h2>" +
       "</ul>" +
-      "</ul>" +
       "<ul>" +
       "<h2>Total : " +
       (element.prix * element.quantite).toFixed(2) +
       "$" +
       "</h2>" +
-      "</article>";
+      "</ul>" +
+      "<ul>" +
+      '<button onclick="supprimerproduit(' +
+      element.id +
+      ')">' +
+      '<i class="material-icons">delete</i>' +
+      "</button>";
+    "</ul>" + "</article>";
   }
 
   total.innerHTML =
@@ -57,6 +63,35 @@ function genererPanier(data) {
     data.valeur.toFixed(2) +
     `$ (${quantitetotal} articles)`;
   "$" + "</h2>" + "</ul>" + "</article>";
+}
+
+function supprimerproduit(id) {
+  const init = {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer: ${window.usager.token}`,
+    },
+  };
+  fetch(`./clients/${window.usager.id}/panier/${id}`, init)
+    .then((reponse) => {
+      if (reponse.ok) {
+        return reponse.json();
+      } else {
+        return reponse.text();
+      }
+    })
+    .then((json) => {
+      if (typeof json === "object" && json !== null) {
+        chargerpanier();
+      } else {
+        console.log(json);
+        afficherMessage(`Erreur: ${json}`, "negatif");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 function changerquantite(id, anciennequantite, input) {
