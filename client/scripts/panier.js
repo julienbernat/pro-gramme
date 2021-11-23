@@ -20,11 +20,11 @@ function genererPanier(data) {
       "<ul>" +
       "<input value=" +
       element.quantite +
-      ' type="number" name="age" id="quantite" required onchange="changerquantite(' +
+      ' type="number" min="1" required onchange="changerquantite(' +
       element.id +
       "," +
       element.quantite +
-      ',this.value)"/>' +
+      ',this)"/>' +
       "</ul>" +
       "<ul>" +
       "<h2>Prix : " +
@@ -59,7 +59,16 @@ function genererPanier(data) {
   "$" + "</h2>" + "</ul>" + "</article>";
 }
 
-function changerquantite(id, anciennequantite, nouvellequantite) {
+function changerquantite(id, anciennequantite, input) {
+  const nouvellequantite = input.value;
+  if (nouvellequantite < 1) {
+    afficherMessage(
+      "Vous devez avoir au moins 1 item pour chaque article dans votre panier",
+      "negatif"
+    );
+    input.value = anciennequantite;
+    return;
+  }
   const quantite = { quantite: Number(nouvellequantite) - anciennequantite };
   const init = {
     method: "PUT",
@@ -77,11 +86,17 @@ function changerquantite(id, anciennequantite, nouvellequantite) {
         return reponse.text();
       }
     })
+    .then((json) => {
+      if (typeof json === "object" && json !== null) {
+        chargerpanier();
+      } else {
+        console.log(json);
+        afficherMessage(`Erreur: ${json}`, "negatif");
+      }
+    })
     .catch((err) => {
       console.log(err);
     });
-  chargerpanier();
-  document.getElementById("quantite").value = nouvellequantite;
 }
 
 function chargerpanier() {
