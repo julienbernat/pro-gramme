@@ -1,18 +1,5 @@
 [
     {
-        "id": 0,
-        "serial": "sdfds",
-        "nom": "Pas de pitié!",
-        "description": "Jte jure tu vas work mon chum",
-        "prix": 6.58,
-        "qte_inventaire": 50,
-        "categorie": {
-            "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
-        }
-    },
-    {
         "id": 1,
         "serial": "sdfds",
         "nom": "Tu vas tout réussir",
@@ -21,8 +8,8 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
         }
     },
     {
@@ -34,8 +21,8 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
         }
     },
     {
@@ -47,21 +34,21 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
         }
     },
     {
         "id": 4,
         "serial": "sdfds",
-        "nom": "Heavy thing",
-        "description": "Heavy thing for heavy gains",
-        "prix": 37.99,
+        "nom": "Pas de pitié!",
+        "description": "Jte jure tu vas work mon chum",
+        "prix": 6.58,
         "qte_inventaire": 50,
         "categorie": {
-            "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "id": 1,
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
         }
     },
     {
@@ -73,8 +60,8 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "proteines",
+            "description": "Des proteines"
         }
     },
     {
@@ -86,8 +73,8 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "proteines",
+            "description": "Des proteines"
         }
     },
     {
@@ -99,8 +86,8 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "proteines",
+            "description": "Des proteines"
         }
     },
     {
@@ -112,8 +99,47 @@
         "qte_inventaire": 50,
         "categorie": {
             "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "proteines",
+            "description": "Des proteines"
+        }
+    },
+    {
+        "id": 9,
+        "serial": "sdfds",
+        "nom": "Smoke me",
+        "description": "Bon work out maintenant respire ma douce fumé :))",
+        "prix": 42,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 3,
+            "nom": "PostWorkout",
+            "description": "Des produits de post-workout"
+        }
+    },
+    {
+        "id": 10,
+        "serial": "sdfds",
+        "nom": "Big Bras",
+        "description": "good job here's a cookie",
+        "prix": 2.5,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 3,
+            "nom": "PostWorkout",
+            "description": "Des produits de post-workout"
+        }
+    },
+    {
+        "id": 11,
+        "serial": "sdfds",
+        "nom": "Pu d'idées",
+        "description": "j'ai pu d'idées",
+        "prix": 2.5,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 4,
+            "nom": "Autre",
+            "description": "Des produits autre"
         }
     }
 ]
