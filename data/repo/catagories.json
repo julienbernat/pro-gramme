@@ -1,12 +1,22 @@
 [
     {
         "id": 1,
-        "nom": "Prunier",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        "nom": "PreWorkout",
+        "description": "des produits de pre-Workout"
     },
     {
         "id": 2,
-        "nom": "Banane",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        "nom": "proteines",
+        "description": "Des proteines"
+    },
+    {
+        "id": 3,
+        "nom": "PostWorkout",
+        "description": "Des produits de post-workout"
+    },
+    {
+        "id": 4,
+        "nom": "Autre",
+        "description": "Des produits autre"
     }
 ]

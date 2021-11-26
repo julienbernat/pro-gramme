@@ -1,5 +1,5 @@
 function genererProduit(data) {
-  let produits = document.getElementById("prod-grille");
+  let produits = document.getElementById("PreWorkOutProd");
 
   let innerHTML = "";
   for (let indice in data) {
@@ -26,6 +26,35 @@ function genererProduit(data) {
   }
   produits.innerHTML = innerHTML;
 }
+function genererProduit2(data) {
+  let produits = document.getElementById("ProtsProd");
+
+  let innerHTML = "";
+  for (let indice in data) {
+    let element = data[indice];
+    innerHTML +=
+        '<article class="prod-item">' +
+        "<h1>" +
+        element.nom +
+        "</h1>" +
+        "<address>" +
+        element.description +
+        "</address>" +
+        "<h2>Prix : " +
+        element.prix +
+        "$" +
+        "</h2>" +
+        "<p>Quantité restant : " +
+        element.qte_inventaire +
+        "</p>" +
+        '<button onclick="ajouteraupanier(' +
+        element.id +
+        ')">Ajouter au panier</button>';
+    innerHTML += "</article>";
+  }
+  produits.innerHTML = innerHTML;
+}
+
 
 function chargerproduits() {
   fetch("./produits")
@@ -33,6 +62,7 @@ function chargerproduits() {
       return produits.json();
     })
     .then((data) => genererProduit(data));
+
 }
 
 function ajouteraupanier(idProduit) {

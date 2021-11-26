@@ -1,11 +1,11 @@
 [
     {
         "id": 0,
-        "serial": "we23545",
-        "nom": "Banane",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
-        "prix": 24.76,
-        "qte_inventaire": 162,
+        "serial": "sdfds",
+        "nom": "Pas de pitié!",
+        "description": "Jte jure tu vas work mon chum",
+        "prix": 6.58,
+        "qte_inventaire": 50,
         "categorie": {
             "id": 1,
             "nom": "Prunier",
@@ -14,24 +14,24 @@
     },
     {
         "id": 1,
-        "serial": "we23545",
-        "nom": "Tomate",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
-        "prix": 24.76,
-        "qte_inventaire": 31,
+        "serial": "sdfds",
+        "nom": "Tu vas tout réussir",
+        "description": "2-3 drop dans ton drink et BOOM t'es hulk",
+        "prix": 9.99,
+        "qte_inventaire": 50,
         "categorie": {
-            "id": 2,
-            "nom": "Banane",
+            "id": 1,
+            "nom": "Prunier",
             "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
         }
     },
     {
         "id": 2,
         "serial": "sdfds",
-        "nom": "concombre",
-        "description": "pas un jouet",
-        "prix": 2.23,
-        "qte_inventaire": 49,
+        "nom": "Allez hop direct dans le gosier, ça part",
+        "description": "Tout est dit",
+        "prix": 19.95,
+        "qte_inventaire": 50,
         "categorie": {
             "id": 1,
             "nom": "Prunier",
@@ -40,14 +40,79 @@
     },
     {
         "id": 3,
-        "serial": "fgd54",
-        "nom": "carotte",
-        "description": "pas un jouet",
-        "prix": 1.23,
+        "serial": "sdfds",
+        "nom": "oui oui",
+        "description": "Tu vas workout avec ça!!",
+        "prix": 14.99,
         "qte_inventaire": 50,
         "categorie": {
             "id": 1,
             "nom": "Prunier",
+            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        }
+    },
+    {
+        "id": 4,
+        "serial": "sdfds",
+        "nom": "Heavy thing",
+        "description": "Heavy thing for heavy gains",
+        "prix": 37.99,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "Banane",
+            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        }
+    },
+    {
+        "id": 5,
+        "serial": "sdfds",
+        "nom": "Des wiggily",
+        "description": "wiggily, wiggily , WIGGILY!!!",
+        "prix": 77.65,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "Banane",
+            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        }
+    },
+    {
+        "id": 6,
+        "serial": "sdfds",
+        "nom": "Big bras, big coeur",
+        "description": "si t'as l'un des deux t'as pas besoin des deux",
+        "prix": 64.66,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "Banane",
+            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        }
+    },
+    {
+        "id": 7,
+        "serial": "sdfds",
+        "nom": "Beautééééééé",
+        "description": "oui oui c'est toi ça",
+        "prix": 36.78,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "Banane",
+            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        }
+    },
+    {
+        "id": 8,
+        "serial": "sdfds",
+        "nom": "Moi",
+        "description": "Moi",
+        "prix": 44.78,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "Banane",
             "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
         }
     }

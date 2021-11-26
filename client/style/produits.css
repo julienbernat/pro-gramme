@@ -1,9 +1,16 @@
-#section-prod {
-  width: 66%;
-  margin-left: 34%;
+.section-prod {
+  width: 80%;
+  margin-left: 20%;
 }
 
-#prod-grille {
+#menu-gauche {
+  position: absolute;
+  width: 15%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.prod-grille {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,10 +19,11 @@
 
 .prod-item {
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 15px;
   width: 300px;
-  margin: 20px;
   text-align: center;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 5px;
 }
 
 .prod-item h1 {
