@@ -115,7 +115,31 @@ function chargerproduits() {
       return produits.json();
     })
     .then((data) => genererProduit(data));
+  openAllProducts();
+}
 
+<!--fonction qui sert à montrer tous les produits quand la page est chargé -->
+function openAllProducts(){
+
+  const preWorkout = document.getElementById('PreWorkOutProd');
+  preWorkout.classList.remove('cache');
+  preWorkout.classList.add('cache');
+  preWorkout.classList.toggle('cache');
+
+  const prot = document.getElementById('ProtsProd');
+  prot.classList.remove('cache');
+  prot.classList.add('cache');
+  prot.classList.toggle('cache');
+
+  const postWorkout = document.getElementById('PostWorkOutProd');
+  postWorkout.classList.remove('cache');
+  postWorkout.classList.add('cache');
+  postWorkout.classList.toggle('cache');
+
+  const autre = document.getElementById('AutresProduits');
+  autre.classList.remove('cache');
+  autre.classList.add('cache');
+  autre.classList.toggle('cache');
 }
 
 function ajouteraupanier(idProduit) {
@@ -156,4 +180,17 @@ function ajouteraupanier(idProduit) {
     .catch((err) => {
       console.log(err);
     });
+}
+function close_clip(idToClose){
+  const preWorkout = document.getElementById(idToClose);
+  preWorkout.classList.toggle('cache');
+}
+
+function recherche(idtext){
+  var text = document.getElementById(idtext).innerText;
+  fetch("./produits?nom="+ "Moi")
+      .then((produits) => {
+        return produits.json();
+      })
+      .then((data) => genererProduit(data));
 }

@@ -1,28 +1,54 @@
 <link rel="stylesheet" href="style/produits.css">
 <section id="menu-gauche">
-    <a href="#para-1">Pré-Workout</a>
+    <a href="#para-1" >Pré-Workout</a>
     <a href="#para-2">Protéines</a>
     <a href="#para-3">Post-Workout</a>
     <a href="#para-4">Autres</a>
+    <div>
+        <label for="rechercheproduit">Recherche: </label>
+        <input type="text" id="rechercheproduit">
+        <input type="submit" value="Submit" onclick="recherche('rechercheproduit')">
+    </div>
 </section>
 <section class="section-prod">
-    <h1 id="para-1">Pré workout</h1>
-    <section class="prod-grille" id="PreWorkOutProd">
+    <div class="sameLineParent">
+        <h2 id="para-1" class="sameLineChildren">Pré workout</h2>
+            <button class="sameLineChildren buttonHideProduct" onclick="close_clip('PreWorkOutProd')">
+                <img class="reduceSizeImageToHide" src="images/imageHideProduits.png" />
+            </button>
+    </div>
+    <section class="prod-grille cache" id="PreWorkOutProd">
         <!--- Les articles vont ce mettre ici --->
     </section>
 
-    <h2 id="para-2">Protéines</h2>
-    <section class="prod-grille" id="ProtsProd">
+    <div class="sameLineParent">
+        <h2 id="para-2" class="sameLineChildren">Protéines</h2>
+        <button class="sameLineChildren buttonHideProduct" onclick="close_clip('ProtsProd')">
+            <img class="reduceSizeImageToHide" src="images/imageHideProduits.png" />
+        </button>
+    </div>
+        <section class="prod-grille cache" id="ProtsProd">
+            <!--- Les articles vont ce mettre ici --->
+        </section>
+
+
+    <div class="sameLineParent">
+    <h2 id="para-3" class="sameLineChildren">Post-Workout</h2>
+        <button class="sameLineChildren buttonHideProduct" onclick="close_clip('PostWorkOutProd')">
+            <img class="reduceSizeImageToHide" src="images/imageHideProduits.png" />
+        </button>
+    </div>
+    <section class="prod-grille cache" id="PostWorkOutProd">
         <!--- Les articles vont ce mettre ici --->
     </section>
 
-    <h2 id="para-3">Post-Workout</h2>
-    <section class="prod-grille" id="PostWorkOutProd">
-        <!--- Les articles vont ce mettre ici --->
-    </section>
-
-    <h2 id="para-4">Autres</h2>
-    <section class="prod-grille" id="AutresProduits">
+    <div class="sameLineParent">
+    <h2 id="para-4" class="sameLineChildren">Autres</h2>
+        <button class="sameLineChildren buttonHideProduct" onclick="close_clip('AutresProduits')">
+            <img class="reduceSizeImageToHide" src="images/imageHideProduits.png" />
+        </button>
+    </div>
+    <section class="prod-grille cache" id="AutresProduits">
         <!--- Les articles vont ce mettre ici --->
     </section>
 </section>
