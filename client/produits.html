@@ -1,14 +1,20 @@
 <link rel="stylesheet" href="style/produits.css">
 <section id="menu-gauche">
+    <form>
+        <label for="rechercheproduit">Recherche: </label>
+        <input type="text" id="rechercheproduit" onkeydown="RechercheavecEnter('rechercheproduit', 'submitResearch', this.key)"/>
+        <div class="sameLineParent">
+            <label for="prixMin" class="sameLineChildren labelPrix">Prix min: </label>
+            <input type="text" value="0" class="sameLineChildren priceSearch" id = "prixMin" />
+            <label for="prixMax" class="sameLineChildren labelPrix">Prix max: </label>
+            <input type="text" value="1000" class="sameLineChildren priceSearch" id = "prixMax" />
+        </div>
+        <input type="submit" value="Recherche" id="submitResearch" onclick="recherche('rechercheproduit', 'prixMin', 'prixMax')">
+    </form>
     <a href="#para-1" >Pré-Workout</a>
     <a href="#para-2">Protéines</a>
     <a href="#para-3">Post-Workout</a>
     <a href="#para-4">Autres</a>
-    <div>
-        <label for="rechercheproduit">Recherche: </label>
-        <input type="text" id="rechercheproduit">
-        <input type="submit" value="Submit" onclick="recherche('rechercheproduit')">
-    </div>
 </section>
 <section class="section-prod">
     <div class="sameLineParent">

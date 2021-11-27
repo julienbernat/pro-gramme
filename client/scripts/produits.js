@@ -1,4 +1,4 @@
-function genererProduit(data) {
+function genererProduit(data, prixMin, prixMax) {
   <!-- la fonction divise les produits dans leurs catégories respective -->
   let preWorkout = document.getElementById("PreWorkOutProd");
   let prots = document.getElementById("ProtsProd");
@@ -16,90 +16,91 @@ function genererProduit(data) {
   let innerHTMLautre = "";
   for (let indice in data) {
     let element = data[indice];
-
-    if(element.categorie.id == 1){
-      innerHTMLpreWorkout +=
-        '<article class="prod-item">' +
-        "<h1>" +
-        element.nom +
-        "</h1>" +
-        "<address>" +
-        element.description +
-        "</address>" +
-        "<h2>Prix : " +
-        element.prix +
-        "$" +
-        "</h2>" +
-        "<p>Quantité restant : " +
-        element.qte_inventaire +
-        "</p>" +
-        '<button onclick="ajouteraupanier(' +
-        element.id +
-        ')">Ajouter au panier</button>';
-      innerHTMLpreWorkout +="</article>";
-    }
-    else if(element.categorie.id == 2){
-      innerHTMLprots +=
-          '<article class="prod-item">' +
-          "<h1>" +
-          element.nom +
-          "</h1>" +
-          "<address>" +
-          element.description +
-          "</address>" +
-          "<h2>Prix : " +
-          element.prix +
-          "$" +
-          "</h2>" +
-          "<p>Quantité restant : " +
-          element.qte_inventaire +
-          "</p>" +
-          '<button onclick="ajouteraupanier(' +
-          element.id +
-          ')">Ajouter au panier</button>';
-      innerHTMLprots +="</article>";
-    }
-    else if(element.categorie.id == 3){
-      innerHTMLpostWorkout +=
-          '<article class="prod-item">' +
-          "<h1>" +
-          element.nom +
-          "</h1>" +
-          "<address>" +
-          element.description +
-          "</address>" +
-          "<h2>Prix : " +
-          element.prix +
-          "$" +
-          "</h2>" +
-          "<p>Quantité restant : " +
-          element.qte_inventaire +
-          "</p>" +
-          '<button onclick="ajouteraupanier(' +
-          element.id +
-          ')">Ajouter au panier</button>';
-      innerHTMLpostWorkout +="</article>";
-    }
-    else if(element.categorie.id == 4){
-      innerHTMLautre +=
-          '<article class="prod-item">' +
-          "<h1>" +
-          element.nom +
-          "</h1>" +
-          "<address>" +
-          element.description +
-          "</address>" +
-          "<h2>Prix : " +
-          element.prix +
-          "$" +
-          "</h2>" +
-          "<p>Quantité restant : " +
-          element.qte_inventaire +
-          "</p>" +
-          '<button onclick="ajouteraupanier(' +
-          element.id +
-          ')">Ajouter au panier</button>';
-      innerHTMLautre +="</article>";
+    if(element.prix >= prixMin && element.prix <= prixMax){
+      if(element.categorie.id == 1){
+        innerHTMLpreWorkout +=
+            '<article class="prod-item">' +
+            "<h1>" +
+            element.nom +
+            "</h1>" +
+            "<address>" +
+            element.description +
+            "</address>" +
+            "<h2>Prix : " +
+            element.prix +
+            "$" +
+            "</h2>" +
+            "<p>Quantité restant : " +
+            element.qte_inventaire +
+            "</p>" +
+            '<button onclick="ajouteraupanier(' +
+            element.id +
+            ')">Ajouter au panier</button>';
+        innerHTMLpreWorkout +="</article>";
+      }
+      else if(element.categorie.id == 2){
+        innerHTMLprots +=
+            '<article class="prod-item">' +
+            "<h1>" +
+            element.nom +
+            "</h1>" +
+            "<address>" +
+            element.description +
+            "</address>" +
+            "<h2>Prix : " +
+            element.prix +
+            "$" +
+            "</h2>" +
+            "<p>Quantité restant : " +
+            element.qte_inventaire +
+            "</p>" +
+            '<button onclick="ajouteraupanier(' +
+            element.id +
+            ')">Ajouter au panier</button>';
+        innerHTMLprots +="</article>";
+      }
+      else if(element.categorie.id == 3){
+        innerHTMLpostWorkout +=
+            '<article class="prod-item">' +
+            "<h1>" +
+            element.nom +
+            "</h1>" +
+            "<address>" +
+            element.description +
+            "</address>" +
+            "<h2>Prix : " +
+            element.prix +
+            "$" +
+            "</h2>" +
+            "<p>Quantité restant : " +
+            element.qte_inventaire +
+            "</p>" +
+            '<button onclick="ajouteraupanier(' +
+            element.id +
+            ')">Ajouter au panier</button>';
+        innerHTMLpostWorkout +="</article>";
+      }
+      else if(element.categorie.id == 4){
+        innerHTMLautre +=
+            '<article class="prod-item">' +
+            "<h1>" +
+            element.nom +
+            "</h1>" +
+            "<address>" +
+            element.description +
+            "</address>" +
+            "<h2>Prix : " +
+            element.prix +
+            "$" +
+            "</h2>" +
+            "<p>Quantité restant : " +
+            element.qte_inventaire +
+            "</p>" +
+            '<button onclick="ajouteraupanier(' +
+            element.id +
+            ')">Ajouter au panier</button>';
+        innerHTMLautre +="</article>";
+      }
     }
 
   }
@@ -114,7 +115,7 @@ function chargerproduits() {
     .then((produits) => {
       return produits.json();
     })
-    .then((data) => genererProduit(data));
+    .then((data) => genererProduit(data, 0, 10000));
   openAllProducts();
 }
 
@@ -186,11 +187,23 @@ function close_clip(idToClose){
   preWorkout.classList.toggle('cache');
 }
 
-function recherche(idtext){
-  var text = document.getElementById(idtext).innerText;
-  fetch("./produits?nom="+ "Moi")
+async function recherche(idtext, prixMin, prixMax){
+  var text = document.getElementById(idtext).value;
+  var prixmin = document.getElementById(prixMin).value;
+  var prixmax = document.getElementById(prixMax).value;
+  if(text != ""){
+    fetch("./produits?nom="+ text)
+        .then((produits) => {
+          return produits.json();
+        })
+        .then((data) => genererProduit(data, prixmin, prixmax));
+  } else{
+    fetch("./produits")
       .then((produits) => {
         return produits.json();
       })
-      .then((data) => genererProduit(data));
+      .then((data) => genererProduit(data, prixmin, prixmax));
+    openAllProducts();
+
+  }
 }

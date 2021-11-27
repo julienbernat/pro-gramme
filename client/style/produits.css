@@ -1,3 +1,14 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .section-prod {
   width: 80%;
   margin-left: 20%;
@@ -60,4 +71,20 @@
   border: none;
   cursor:pointer;
   overflow: hidden;
+}
+
+.priceSearch{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 17%;
+}
+
+.labelPrix{
+  font-size: 15px;
+}
+#submitResearch{
+  margin-bottom: 10px;
+  width: 65%;
+  background-color: #444444;
+  color: honeydew;
 }

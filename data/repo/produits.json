@@ -18,7 +18,7 @@
         "nom": "Allez hop direct dans le gosier, ça part",
         "description": "Tout est dit",
         "prix": 19.95,
-        "qte_inventaire": 50,
+        "qte_inventaire": 45,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",

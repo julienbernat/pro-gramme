@@ -38,3 +38,11 @@ async function chargerinscription () {
     const btnInscription = document.getElementById('btn-sinscrire');
     btnInscription.addEventListener('click', sinscrire);
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnFermeBoite = document.getElementById('fermer-boite');
+    btnFermeBoite.addEventListener('click', function() {
+        retirerMessage();
+    });
+}, false);

@@ -158,5 +158,44 @@
             ]
         },
         "historique": []
+    },
+    {
+        "id": 7,
+        "prenom": "a",
+        "nom": "a",
+        "age": 3,
+        "adresse": "a",
+        "pays": "a",
+        "courriel": "clement@hassaoui.com",
+        "mdp": "$2b$08$AQWaTlONp8DixjV6Beu0L.u0EFVo3ydvfiES6jZz/jWRLnNLR5zXu",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 8,
+        "prenom": "a",
+        "nom": "a",
+        "age": 12,
+        "adresse": "a",
+        "pays": "a",
+        "courriel": "clem@c.com",
+        "mdp": "$2b$08$3AD38SgJdmuAWaBiPenf8OJKuj9nUcMbyVZnusBjDa2rEoOgfzCQq",
+        "panier": {
+            "valeur": 99.75,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 2,
+                    "nomProduit": "Allez hop direct dans le gosier, ça part",
+                    "descriptionProduit": "Tout est dit",
+                    "prix": 19.95,
+                    "quantite": 5
+                }
+            ]
+        },
+        "historique": []
     }
 ]
