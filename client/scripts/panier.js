@@ -9,7 +9,7 @@ function genererPanier(data) {
     quantitetotal += element.quantite;
     produits.innerHTML +=
       '<article class="panier-item">' +
-      "<ul>" +
+      '<ul  class="nomEtDes">' +
       "<h1>" +
       element.nomProduit +
       "</h1>" +
@@ -18,7 +18,7 @@ function genererPanier(data) {
       "</address>" +
       "</ul>" +
       "<ul>" +
-      "<input value=" +
+      '<input class="prixPosition" value=' +
       element.quantite +
       ' type="number" min="1" required onchange="changerquantite(' +
       element.id +

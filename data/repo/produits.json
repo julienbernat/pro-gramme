@@ -18,7 +18,7 @@
         "nom": "Allez hop direct dans le gosier, ça part",
         "description": "Tout est dit",
         "prix": 19.95,
-        "qte_inventaire": 45,
+        "qte_inventaire": 48,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -31,7 +31,7 @@
         "nom": "oui oui",
         "description": "Tu vas workout avec ça!!",
         "prix": 14.99,
-        "qte_inventaire": 50,
+        "qte_inventaire": 48,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -83,7 +83,7 @@
         "nom": "Beautééééééé",
         "description": "oui oui c'est toi ça",
         "prix": 36.78,
-        "qte_inventaire": 50,
+        "qte_inventaire": -10,
         "categorie": {
             "id": 2,
             "nom": "proteines",

@@ -184,7 +184,7 @@
         "courriel": "clem@c.com",
         "mdp": "$2b$08$3AD38SgJdmuAWaBiPenf8OJKuj9nUcMbyVZnusBjDa2rEoOgfzCQq",
         "panier": {
-            "valeur": 99.75,
+            "valeur": 2276.6800000000003,
             "items": [
                 {
                     "id": 0,
@@ -192,7 +192,23 @@
                     "nomProduit": "Allez hop direct dans le gosier, ça part",
                     "descriptionProduit": "Tout est dit",
                     "prix": 19.95,
-                    "quantite": 5
+                    "quantite": 2
+                },
+                {
+                    "id": 1,
+                    "idProduit": 3,
+                    "nomProduit": "oui oui",
+                    "descriptionProduit": "Tu vas workout avec ça!!",
+                    "prix": 14.99,
+                    "quantite": 2
+                },
+                {
+                    "id": 2,
+                    "idProduit": 7,
+                    "nomProduit": "Beautééééééé",
+                    "descriptionProduit": "oui oui c'est toi ça",
+                    "prix": 36.78,
+                    "quantite": 60
                 }
             ]
         },
