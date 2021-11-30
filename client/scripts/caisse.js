@@ -1,11 +1,17 @@
 function envoyer() {
   const formulaire = new FormData(document.getElementById("formulaire-caisse"));
+  console.log({ formulaire });
   const corps = Object.fromEntries(formulaire);
-  const body = { ...corps, idClient: window.PushManager.id };
+  console.log({ corps });
+  const body = { idClient: window.usager.id };
+  console.log({ body });
   const init = {
     method: "POST",
     body: JSON.stringify(body),
-    headers: { "Content-type": "application/json; charset=UTF-8" },
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer: ${window.usager.token}`,
+    },
   };
   fetch("/ventes", init)
     .then((reponse) => {

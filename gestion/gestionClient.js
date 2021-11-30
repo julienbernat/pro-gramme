@@ -1,8 +1,8 @@
-const Client = require('../data/Client');
-const ItemPanier = require('../data/ItemPanier');
-const Panier = require('../data/Panier');
+const Client = require("../data/Client");
+const ItemPanier = require("../data/ItemPanier");
+const Panier = require("../data/Panier");
 
-const bCrypt = require('bcrypt');
+const bCrypt = require("bcrypt");
 const saltRounds = 8;
 
 class GestionClient {
@@ -34,14 +34,28 @@ class GestionClient {
    */
   ajouteClient(req, res) {
     // Il faudrait vérifier que la pays est valide et que l'adresse existe. Une autre fois peut-être
-    const duplicata = this.collectionClient.recupereClientParCourriel(req.body.courriel);
+    const duplicata = this.collectionClient.recupereClientParCourriel(
+      req.body.courriel
+    );
     if (duplicata) {
-      res.status(400).send('Il y a déjà un client avec cette adresse');
+      res.status(400).send("Il y a déjà un client avec cette adresse");
       return;
     }
     const that = this;
-    bCrypt.hash(req.body.mdp, saltRounds).then(function(hash) { // La doc dit que c'est plus rapide async
-      const c = new Client(-1, req.body.prenom, req.body.nom, parseInt(req.body.age), req.body.adresse, req.body.pays, new Panier(0, []), req.body.courriel, hash, []);
+    bCrypt.hash(req.body.mdp, saltRounds).then(function (hash) {
+      // La doc dit que c'est plus rapide async
+      const c = new Client(
+        -1,
+        req.body.prenom,
+        req.body.nom,
+        parseInt(req.body.age),
+        req.body.adresse,
+        req.body.pays,
+        new Panier(0, []),
+        req.body.courriel,
+        hash,
+        []
+      );
       that.collectionClient.ajouterClient(c);
       res.send(c.public());
     });
@@ -86,10 +100,14 @@ class GestionClient {
       const adresse = req.query.adresse;
       const pays = req.query.pays;
 
-      res.send(this.collectionClient.rechercheClient(prenom, nom, age, adresse, pays));
-    } else { // sinon c'est un get avec ID ou sans contrainte
+      res.send(
+        this.collectionClient.rechercheClient(prenom, nom, age, adresse, pays)
+      );
+    } else {
+      // sinon c'est un get avec ID ou sans contrainte
       let idClient = parseInt(req.params.idClient);
-      if (!(idClient >= 0)) { // sans la parenthese, !idClient est évalué avant le >= parce que javascript
+      if (!(idClient >= 0)) {
+        // sans la parenthese, !idClient est évalué avant le >= parce que javascript
         idClient = -1;
       }
       const c = this.collectionClient.recupereClient(idClient);
@@ -113,7 +131,8 @@ class GestionClient {
   recuperePanier(req, res) {
     const idClient = parseInt(req.params.idClient);
     let idItem = parseInt(req.params.idItem);
-    if (!(idItem >= 0)) { // sans la parenthese, !idItem est évalué avant le >= parce que javascript
+    if (!(idItem >= 0)) {
+      // sans la parenthese, !idItem est évalué avant le >= parce que javascript
       idItem = -1;
     } // Il serait bien de valider que l'item existe réellement dans le panier.
     if (this.collectionClient.recupereClient(idClient)) {
@@ -134,27 +153,49 @@ class GestionClient {
 
       const produit = this.collectionProduit.recupereProduit(idProduit);
       if (!produit) {
-        res.status(400).send(`Le produit avec l'id ${idProduit} n'a pas été trouvé.`);
+        res
+          .status(400)
+          .send(`Le produit avec l'id ${idProduit} n'a pas été trouvé.`);
         return;
       }
       if (!(produit.qte_inventaire > quantite)) {
-        res.status(400).send(`Il n'y a que ${produit.qte_inventaire} de disponible.  Impossible de réserver ${quantite} exemplaires.`);
+        res
+          .status(400)
+          .send(
+            `Il n'y a que ${produit.qte_inventaire} de disponible.  Impossible de réserver ${quantite} exemplaires.`
+          );
         return;
       }
       this.collectionProduit.ajusterQuantite(produit, -quantite);
 
       let panier;
-      const item = this.collectionClient.recupereProduitDansPanier(idClient, idProduit);
+      const item = this.collectionClient.recupereProduitDansPanier(
+        idClient,
+        idProduit
+      );
       if (item) {
-        panier = this.collectionClient.modifierPanier(idClient, item.id, quantite);
+        panier = this.collectionClient.modifierPanier(
+          idClient,
+          item.id,
+          quantite
+        );
       } else {
-        const item = new ItemPanier(-1, idProduit, produit.nom, produit.description, produit.prix, quantite);
+        const item = new ItemPanier(
+          -1,
+          idProduit,
+          produit.nom,
+          produit.description,
+          produit.prix,
+          quantite
+        );
         panier = this.collectionClient.ajoutePanier(idClient, item);
       }
 
       res.send(panier);
     } else {
-      res.status(400).send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
+      res
+        .status(400)
+        .send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
     }
   }
 
@@ -171,21 +212,35 @@ class GestionClient {
 
       const item = this.collectionClient.recuperePanier(idClient, idItem);
       if (!item) {
-        res.status(400).send(`L'item avec l'id ${idItem} n'a pas été trouvé dans le panier.`);
+        res
+          .status(400)
+          .send(
+            `L'item avec l'id ${idItem} n'a pas été trouvé dans le panier.`
+          );
         return;
       }
       const produit = this.collectionProduit.recupereProduit(item.idProduit);
       if (!(produit.qte_inventaire + quantite >= 0)) {
-        res.status(400).send(`Il n'y a que ${produit.qte_inventaire} de disponible.  Impossible de réserver ${quantite} exemplaires.`);
+        res
+          .status(400)
+          .send(
+            `Il n'y a que ${produit.qte_inventaire} de disponible.  Impossible de réserver ${quantite} exemplaires.`
+          );
         return;
       }
       this.collectionProduit.ajusterQuantite(produit, -quantite); // Si on fait un plus dans la panier, il faut faire un moins sur l'inventaire.
 
-      const panier = this.collectionClient.modifierPanier(idClient, idItem, quantite);
+      const panier = this.collectionClient.modifierPanier(
+        idClient,
+        idItem,
+        quantite
+      );
 
       res.send(panier);
     } else {
-      res.status(400).send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
+      res
+        .status(400)
+        .send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
     }
   }
 
@@ -196,12 +251,20 @@ class GestionClient {
 
       const item = this.collectionClient.recuperePanier(idClient, idItem);
       if (!item) {
-        res.status(400).send(`L'item avec l'id ${idItem} n'a pas été trouvé dans le panier.`);
+        res
+          .status(400)
+          .send(
+            `L'item avec l'id ${idItem} n'a pas été trouvé dans le panier.`
+          );
         return;
       }
       const produit = this.collectionProduit.recupereProduit(item.idProduit);
       if (!produit) {
-        res.status(400).send(`Le produit ${produit.nom} ne semble plus exister. Comment est-ce possible?`);
+        res
+          .status(400)
+          .send(
+            `Le produit ${produit.nom} ne semble plus exister. Comment est-ce possible?`
+          );
         return;
       }
       this.collectionProduit.ajusterQuantite(produit, item.quantite); // Si on fait un plus dans la panier, il faut faire un moins sur l'inventaire.
@@ -210,7 +273,9 @@ class GestionClient {
 
       res.send(panier);
     } else {
-      res.status(400).send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
+      res
+        .status(400)
+        .send(`Le client avec l'id ${idClient} n'a pas été trouvé`);
     }
   }
 }

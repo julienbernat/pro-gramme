@@ -83,5 +83,46 @@
         ],
         "status": "prepare",
         "date": "2021-11-13T21:52:59.697Z"
+    },
+    {
+        "id": 6,
+        "idClient": 8,
+        "montant": 51.51,
+        "produits": [
+            {
+                "id": 0,
+                "idProduit": 1,
+                "nomProduit": "Tu vas tout réussir",
+                "descriptionProduit": "2-3 drop dans ton drink et BOOM t'es hulk",
+                "prix": 9.99,
+                "quantite": 1
+            },
+            {
+                "id": 1,
+                "idProduit": 2,
+                "nomProduit": "Allez hop direct dans le gosier, ça part",
+                "descriptionProduit": "Tout est dit",
+                "prix": 19.95,
+                "quantite": 1
+            },
+            {
+                "id": 2,
+                "idProduit": 3,
+                "nomProduit": "oui oui",
+                "descriptionProduit": "Tu vas workout avec ça!!",
+                "prix": 14.99,
+                "quantite": 1
+            },
+            {
+                "id": 3,
+                "idProduit": 4,
+                "nomProduit": "Pas de pitié!",
+                "descriptionProduit": "Jte jure tu vas work mon chum",
+                "prix": 6.58,
+                "quantite": 1
+            }
+        ],
+        "status": "reçue",
+        "date": "2021-11-30T16:16:03.319Z"
     }
 ]

@@ -184,34 +184,51 @@
         "courriel": "clem@c.com",
         "mdp": "$2b$08$3AD38SgJdmuAWaBiPenf8OJKuj9nUcMbyVZnusBjDa2rEoOgfzCQq",
         "panier": {
-            "valeur": 2276.6800000000003,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 2,
-                    "nomProduit": "Allez hop direct dans le gosier, ça part",
-                    "descriptionProduit": "Tout est dit",
-                    "prix": 19.95,
-                    "quantite": 2
-                },
-                {
-                    "id": 1,
-                    "idProduit": 3,
-                    "nomProduit": "oui oui",
-                    "descriptionProduit": "Tu vas workout avec ça!!",
-                    "prix": 14.99,
-                    "quantite": 2
-                },
-                {
-                    "id": 2,
-                    "idProduit": 7,
-                    "nomProduit": "Beautééééééé",
-                    "descriptionProduit": "oui oui c'est toi ça",
-                    "prix": 36.78,
-                    "quantite": 60
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
-        "historique": []
+        "historique": [
+            {
+                "id": -1,
+                "idClient": 8,
+                "montant": 51.51,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tu vas tout réussir",
+                        "descriptionProduit": "2-3 drop dans ton drink et BOOM t'es hulk",
+                        "prix": 9.99,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 2,
+                        "nomProduit": "Allez hop direct dans le gosier, ça part",
+                        "descriptionProduit": "Tout est dit",
+                        "prix": 19.95,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 2,
+                        "idProduit": 3,
+                        "nomProduit": "oui oui",
+                        "descriptionProduit": "Tu vas workout avec ça!!",
+                        "prix": 14.99,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 3,
+                        "idProduit": 4,
+                        "nomProduit": "Pas de pitié!",
+                        "descriptionProduit": "Jte jure tu vas work mon chum",
+                        "prix": 6.58,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2021-11-30T16:16:03.319Z"
+            }
+        ]
     }
 ]

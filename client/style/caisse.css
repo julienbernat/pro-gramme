@@ -21,14 +21,20 @@
 #adresse-livraison input {
   width: 30%;
 }
-
+.revenir {
+  text-align: left;
+}
+.envoyer {
+  text-align: right;
+}
 .submit-group input[type="submit"] {
   width: 150px;
 }
 .submit-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 500px;
-  text-align: right;
-  padding: 14px 0px 14px 28px;
+  padding: 14px 0px 14px 0px;
 }
 
 form .group {
