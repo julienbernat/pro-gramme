@@ -33,4 +33,8 @@ router.get("/caisse", function (req, res) {
   res.sendFile(path.join(__dirname + "/../client/caisse.html"));
 });
 
+router.get("/confirmation", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/confirmation.html"));
+});
+
 module.exports = router;

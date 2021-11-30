@@ -5,7 +5,7 @@
         "nom": "Tu vas tout réussir",
         "description": "2-3 drop dans ton drink et BOOM t'es hulk",
         "prix": 9.99,
-        "qte_inventaire": 49,
+        "qte_inventaire": 47,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",

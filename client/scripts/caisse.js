@@ -1,10 +1,8 @@
 function envoyer() {
   const formulaire = new FormData(document.getElementById("formulaire-caisse"));
-  console.log({ formulaire });
   const corps = Object.fromEntries(formulaire);
   console.log({ corps });
   const body = { idClient: window.usager.id };
-  console.log({ body });
   const init = {
     method: "POST",
     body: JSON.stringify(body),
@@ -23,6 +21,7 @@ function envoyer() {
     })
     .then((json) => {
       if (typeof json === "object" && json !== null) {
+        window.location.href = "/#confirmation";
         console.log("Reussi");
       } else {
         console.log(json);
