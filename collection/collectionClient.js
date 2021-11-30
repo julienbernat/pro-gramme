@@ -1,8 +1,8 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const Client = require('../data/Client');
-const Panier = require('../data/Panier');
-const path = require('path');
+const Client = require("../data/Client");
+const Panier = require("../data/Panier");
+const path = require("path");
 
 /**
  * Charge les clients depuis le fichier
@@ -12,7 +12,7 @@ const path = require('path');
 class CollectionClient {
   constructor() {
     this.liste_clients = [];
-    this.CHEMIN_PAR_DEFAUT = path.join(__dirname, '/../data/repo/clients.json');
+    this.CHEMIN_PAR_DEFAUT = path.join(__dirname, "/../data/repo/clients.json");
   }
 
   chargerClients(fichier) {
@@ -22,19 +22,34 @@ class CollectionClient {
       const chemin = fichier || this.CHEMIN_PAR_DEFAUT;
       console.log(`Chargement des clients depuis ${chemin}`);
 
-      fs.readFile(chemin, { flag: 'r' }, (err, data) => {
+      fs.readFile(chemin, { flag: "r" }, (err, data) => {
         if (err && err.errno === -4058) {
-          console.log('Le fichier n\'existe pas, la liste des clients sera vide');
+          console.log(
+            "Le fichier n'existe pas, la liste des clients sera vide"
+          );
         } else if (data.length > 0) {
           const liste = JSON.parse(data);
           for (const elem in liste) {
             const c = liste[elem];
-            this.liste_clients.push(new Client(c.id, c.prenom, c.nom, c.age, c.adresse, c.pays, c.panier, c.courriel, c.mdp, c.historique));
+            this.liste_clients.push(
+              new Client(
+                c.id,
+                c.prenom,
+                c.nom,
+                c.age,
+                c.adresse,
+                c.pays,
+                c.panier,
+                c.courriel,
+                c.mdp,
+                c.historique
+              )
+            );
           }
         }
       });
     } catch (err) {
-      console.log('Erreur dans le chargement des clients');
+      console.log("Erreur dans le chargement des clients");
     }
   }
 
@@ -69,13 +84,13 @@ class CollectionClient {
   }
 
   /**
-     * Retourne les clients
-     * @param id Optionnel, pour avoir un seul client au lieu de toute la liste
-     * @returns {*[]|*}
-     */
+   * Retourne les clients
+   * @param id Optionnel, pour avoir un seul client au lieu de toute la liste
+   * @returns {*[]|*}
+   */
   recupereClient(id) {
     if (id > -1) {
-      return this.liste_clients.find(x => x.id === id);
+      return this.liste_clients.find((x) => x.id === id);
     } else {
       return this.liste_clients;
     }
@@ -88,7 +103,7 @@ class CollectionClient {
    */
   recupereClientParCourriel(courriel) {
     if (courriel) {
-      return this.liste_clients.find(x => x.courriel === courriel);
+      return this.liste_clients.find((x) => x.courriel === courriel);
     }
     return null;
   }
@@ -104,7 +119,8 @@ class CollectionClient {
    */
   rechercheClient(prenom, nom, age, adresse, pays) {
     let listeLocale = [...this.liste_clients];
-    if (prenom) { // sera vrai si prenom n'est pas: null, undefined, NaN, empty string (""), 0, false
+    if (prenom) {
+      // sera vrai si prenom n'est pas: null, undefined, NaN, empty string (""), 0, false
       listeLocale = listeLocale.filter(function (elem) {
         return elem.prenom === prenom;
       });
@@ -140,14 +156,14 @@ class CollectionClient {
     const chemin = fichier || this.CHEMIN_PAR_DEFAUT;
     const data = JSON.stringify(this.liste_clients, null, 4);
     try {
-      fs.writeFile(chemin, data, { flag: 'w+' }, (err) => {
+      fs.writeFile(chemin, data, { flag: "w+" }, (err) => {
         if (err) {
           throw err;
         }
         console.log(`Clients enregistrés dans le fichier ${chemin}`);
       });
     } catch (err) {
-      console.log('Erreur dans l\'enregistrement du fichier');
+      console.log("Erreur dans l'enregistrement du fichier");
       console.log(err.message);
     }
   }
@@ -169,7 +185,10 @@ class CollectionClient {
    * @param client instance de client
    */
   effacerClient(client) {
-    this.liste_clients.splice(this.liste_clients.findIndex(item => item.id === client.id), 1);
+    this.liste_clients.splice(
+      this.liste_clients.findIndex((item) => item.id === client.id),
+      1
+    );
     this.sauvegarder();
   }
 
@@ -180,7 +199,8 @@ class CollectionClient {
    */
   modifierClient(nouveauClient) {
     const objIndex = this.getClientIndex(nouveauClient.id);
-    if (objIndex > -1) { // S'il n'est pas trouvé l'index sera -1
+    if (objIndex > -1) {
+      // S'il n'est pas trouvé l'index sera -1
       if (nouveauClient.prenom) {
         this.liste_clients[objIndex].prenom = nouveauClient.prenom;
       }
@@ -207,10 +227,12 @@ class CollectionClient {
    * @param idItem
    * @returns {*}
    */
-  recuperePanier (idClient, idItem) {
+  recuperePanier(idClient, idItem) {
     const clientIndex = this.getClientIndex(idClient);
     if (idItem >= 0) {
-      const itemIndex = this.liste_clients[clientIndex].panier.items.findIndex(obj => obj.id === idItem);
+      const itemIndex = this.liste_clients[clientIndex].panier.items.findIndex(
+        (obj) => obj.idProduit === idItem
+      );
       return this.liste_clients[clientIndex].panier.items[itemIndex];
     }
     return this.liste_clients[clientIndex].panier;
@@ -235,7 +257,7 @@ class CollectionClient {
    * @returns {number}
    */
   getClientIndex(idClient) {
-    return this.liste_clients.findIndex(obj => obj.id === idClient);
+    return this.liste_clients.findIndex((obj) => obj.id === idClient);
   }
 
   /**
@@ -246,7 +268,7 @@ class CollectionClient {
     const indexClient = this.getClientIndex(idClient);
     const client = this.liste_clients[indexClient];
     client.panier.valeur = client.panier.items.reduce(function (a, b) {
-      return a + (b.quantite * b.prix);
+      return a + b.quantite * b.prix;
     }, 0);
     this.sauvegarder();
   }
@@ -260,7 +282,9 @@ class CollectionClient {
   recupereProduitDansPanier(idClient, idProduit) {
     const indexClient = this.getClientIndex(idClient);
     const panier = this.liste_clients[indexClient].panier;
-    const itemIndex = panier.items.findIndex(obj => obj.idProduit === idProduit);
+    const itemIndex = panier.items.findIndex(
+      (obj) => obj.idProduit === idProduit
+    );
 
     return panier.items[itemIndex];
   }
@@ -276,8 +300,9 @@ class CollectionClient {
   modifierPanier(idClient, idItem, modification) {
     const indexClient = this.getClientIndex(idClient);
     const panier = this.liste_clients[indexClient].panier;
-    const itemIndex = panier.items.findIndex(obj => obj.id === idItem);
-    this.liste_clients[indexClient].panier.items[itemIndex].quantite += modification;
+    const itemIndex = panier.items.findIndex((obj) => obj.id === idItem);
+    this.liste_clients[indexClient].panier.items[itemIndex].quantite +=
+      modification;
 
     this.calculePanier(idClient);
     return panier;
@@ -292,7 +317,7 @@ class CollectionClient {
   retirePanier(idClient, item) {
     const indexClient = this.getClientIndex(idClient);
     const panier = this.liste_clients[indexClient].panier;
-    const itemIndex = panier.items.findIndex(obj => obj.id === item.id);
+    const itemIndex = panier.items.findIndex((obj) => obj.id === item.id);
     panier.items.splice(itemIndex, 1);
     this.calculePanier(idClient);
     return panier;
@@ -317,7 +342,9 @@ class CollectionClient {
    */
   modifierStatusHistorique(vente, status) {
     const indexClient = this.getClientIndex(vente.idClient);
-    const indexVente = this.liste_clients[indexClient].historique.findIndex(obj => obj.id === vente.id);
+    const indexVente = this.liste_clients[indexClient].historique.findIndex(
+      (obj) => obj.id === vente.id
+    );
     this.liste_clients[indexClient].historique[indexVente].status = status;
     this.sauvegarder();
   }

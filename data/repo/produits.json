@@ -5,7 +5,7 @@
         "nom": "Tu vas tout réussir",
         "description": "2-3 drop dans ton drink et BOOM t'es hulk",
         "prix": 9.99,
-        "qte_inventaire": 47,
+        "qte_inventaire": 31,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -18,7 +18,7 @@
         "nom": "Allez hop direct dans le gosier, ça part",
         "description": "Tout est dit",
         "prix": 19.95,
-        "qte_inventaire": 49,
+        "qte_inventaire": 22,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -31,7 +31,7 @@
         "nom": "oui oui",
         "description": "Tu vas workout avec ça!!",
         "prix": 14.99,
-        "qte_inventaire": 49,
+        "qte_inventaire": 44,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -44,7 +44,7 @@
         "nom": "Pas de pitié!",
         "description": "Jte jure tu vas work mon chum",
         "prix": 6.58,
-        "qte_inventaire": 49,
+        "qte_inventaire": 48,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -70,7 +70,7 @@
         "nom": "Big bras, big coeur",
         "description": "si t'as l'un des deux t'as pas besoin des deux",
         "prix": 64.66,
-        "qte_inventaire": 50,
+        "qte_inventaire": 47,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -83,7 +83,7 @@
         "nom": "Beautééééééé",
         "description": "oui oui c'est toi ça",
         "prix": 36.78,
-        "qte_inventaire": 50,
+        "qte_inventaire": 49,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -122,7 +122,7 @@
         "nom": "Big Bras",
         "description": "good job here's a cookie",
         "prix": 2.5,
-        "qte_inventaire": 50,
+        "qte_inventaire": 49,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",

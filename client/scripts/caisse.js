@@ -21,7 +21,8 @@ function envoyer() {
     })
     .then((json) => {
       if (typeof json === "object" && json !== null) {
-        window.location.href = "/#confirmation";
+        window.confirmation = json;
+        window.location.href = "/#/confirmation";
         console.log("Reussi");
       } else {
         console.log(json);
