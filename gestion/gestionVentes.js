@@ -1,4 +1,4 @@
-const Vente = require('../data/Vente');
+const Vente = require("../data/Vente");
 
 class GestionVentes {
   constructor(collectionClient, collectionVente, collectionProduit) {
@@ -7,10 +7,10 @@ class GestionVentes {
     this.collectionProduit = collectionProduit;
 
     this.statusPossibles = {
-      recue: 'reçue',
-      prepare: 'préparée',
-      en_route: 'en route',
-      livree: 'livrée'
+      recue: "reçue",
+      prepare: "préparée",
+      en_route: "en route",
+      livree: "livrée",
     };
   }
 
@@ -27,11 +27,14 @@ class GestionVentes {
         this.collectionVente.effacerVente(vente);
         for (const i in vente.produits) {
           const itemPanier = vente.produits[i];
-          this.collectionProduit.ajusterQuantite({ id: itemPanier.idProduit }, itemPanier.quantite);
+          this.collectionProduit.ajusterQuantite(
+            { id: itemPanier.idProduit },
+            itemPanier.quantite
+          );
         }
         res.status(200).send(vente);
       } else {
-        res.status(400).send('Il est trop tard pour annuler la vente');
+        res.status(400).send("Il est trop tard pour annuler la vente");
       }
     } else {
       res.status(400).send(`La vente avec l'id ${id} n'a pas été trouvée`);
@@ -48,9 +51,16 @@ class GestionVentes {
     const client = this.collectionClient.recupereClient(idClient);
     if (client) {
       if (client.panier.valeur > 0) {
-        const vente = new Vente(-1, idClient, client.panier.valeur, client.panier.items, this.statusPossibles.recue, new Date());
-        this.collectionClient.acheterPanier(client, vente);
+        const vente = new Vente(
+          -1,
+          idClient,
+          client.panier.valeur,
+          client.panier.items,
+          this.statusPossibles.recue,
+          new Date()
+        );
         this.collectionVente.ajouterVente(vente);
+        this.collectionClient.acheterPanier(client, vente);
         res.send(vente);
       } else {
         res.status(400).send(`Le client ${idClient} n'a pas de panier actif`);
@@ -95,10 +105,18 @@ class GestionVentes {
       const depuis = req.query.depuis;
       const idClient = parseInt(req.query.client);
 
-      res.send(this.collectionVente.rechercheVentes(idClient, status, Date.parse(depuis)));
-    } else { // sinon c'est un get avec ID ou sans contrainte
+      res.send(
+        this.collectionVente.rechercheVentes(
+          idClient,
+          status,
+          Date.parse(depuis)
+        )
+      );
+    } else {
+      // sinon c'est un get avec ID ou sans contrainte
       let id = parseInt(req.params.idVente);
-      if (!(id >= 0)) { // sans la parenthese, !id est évalué avant le >= parce que javascript
+      if (!(id >= 0)) {
+        // sans la parenthese, !id est évalué avant le >= parce que javascript
         id = -1;
       }
       res.send(this.collectionVente.recupereVentes(id));
