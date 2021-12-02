@@ -1,37 +1,11 @@
 [
     {
-        "id": 1,
-        "serial": "sdfds",
-        "nom": "Tu vas tout réussir",
-        "description": "2-3 drop dans ton drink et BOOM t'es hulk",
-        "prix": 9.99,
-        "qte_inventaire": 28,
-        "categorie": {
-            "id": 1,
-            "nom": "PreWorkout",
-            "description": "des produits de pre-Workout"
-        }
-    },
-    {
-        "id": 2,
-        "serial": "sdfds",
-        "nom": "Allez hop direct dans le gosier, ça part",
-        "description": "Tout est dit",
-        "prix": 19.95,
-        "qte_inventaire": 17,
-        "categorie": {
-            "id": 1,
-            "nom": "PreWorkout",
-            "description": "des produits de pre-Workout"
-        }
-    },
-    {
         "id": 3,
         "serial": "sdfds",
         "nom": "oui oui",
         "description": "Tu vas workout avec ça!!",
         "prix": 14.99,
-        "qte_inventaire": 40,
+        "qte_inventaire": 22,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -44,7 +18,7 @@
         "nom": "Pas de pitié!",
         "description": "Jte jure tu vas work mon chum",
         "prix": 6.58,
-        "qte_inventaire": 48,
+        "qte_inventaire": 45,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -57,7 +31,7 @@
         "nom": "Des wiggily",
         "description": "wiggily, wiggily , WIGGILY!!!",
         "prix": 77.65,
-        "qte_inventaire": 50,
+        "qte_inventaire": 39,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -70,7 +44,7 @@
         "nom": "Big bras, big coeur",
         "description": "si t'as l'un des deux t'as pas besoin des deux",
         "prix": 64.66,
-        "qte_inventaire": 47,
+        "qte_inventaire": 41,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -83,7 +57,7 @@
         "nom": "Beautééééééé",
         "description": "oui oui c'est toi ça",
         "prix": 36.78,
-        "qte_inventaire": 49,
+        "qte_inventaire": 47,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -96,24 +70,11 @@
         "nom": "Moi",
         "description": "Moi",
         "prix": 44.78,
-        "qte_inventaire": 50,
+        "qte_inventaire": 42,
         "categorie": {
             "id": 2,
             "nom": "proteines",
             "description": "Des proteines"
-        }
-    },
-    {
-        "id": 9,
-        "serial": "sdfds",
-        "nom": "Smoke me",
-        "description": "Bon work out maintenant respire ma douce fumé :))",
-        "prix": 42,
-        "qte_inventaire": 50,
-        "categorie": {
-            "id": 3,
-            "nom": "PostWorkout",
-            "description": "Des produits de post-workout"
         }
     },
     {
@@ -122,7 +83,7 @@
         "nom": "Big Bras",
         "description": "good job here's a cookie",
         "prix": 2.5,
-        "qte_inventaire": 49,
+        "qte_inventaire": 46,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -135,7 +96,7 @@
         "nom": "Pu d'idées",
         "description": "j'ai pu d'idées",
         "prix": 2.5,
-        "qte_inventaire": 50,
+        "qte_inventaire": 47,
         "categorie": {
             "id": 4,
             "nom": "Autre",

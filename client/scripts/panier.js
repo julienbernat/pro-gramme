@@ -5,6 +5,7 @@ function genererPanier(data) {
   let quantitetotal = 0;
   produits.innerHTML = "";
   for (let indice in data.items) {
+
     let element = data.items[indice];
     quantitetotal += element.quantite;
     produits.innerHTML +=
@@ -21,10 +22,7 @@ function genererPanier(data) {
       '<input class="prixPosition" value=' +
       element.quantite +
       ' type="number" min="1" required onchange="changerquantite(' +
-      element.id +
-      "," +
-      element.quantite +
-      ',this)"/>' +
+        element.id + ',' + element.quantite + ',this)"/>' +
       "</ul>" +
       "<ul>" +
       "<h2>Prix : " +
@@ -40,11 +38,13 @@ function genererPanier(data) {
       "</ul>" +
       "<ul>" +
       '<button onclick="supprimerproduit(' +
-      element.id +
+      element.idProduit +
       ')">' +
       '<i class="material-icons">delete</i>' +
       "</button>";
     "</ul>" + "</article>";
+
+    console.log(element.id);
   }
 
   total.innerHTML =
@@ -63,6 +63,7 @@ function genererPanier(data) {
     data.valeur.toFixed(2) +
     `$ (${quantitetotal} articles)`;
   "$" + "</h2>" + "</ul>" + "</article>";
+
 }
 
 function supprimerproduit(id) {
@@ -94,7 +95,7 @@ function supprimerproduit(id) {
     });
 }
 
-function changerquantite(id, anciennequantite, input) {
+function changerquantite(id, anciennequantite, input) {;
   const nouvellequantite = input.value;
   if (nouvellequantite < 1) {
     afficherMessage(

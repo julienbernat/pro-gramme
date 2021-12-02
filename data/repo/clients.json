@@ -184,7 +184,7 @@
         "courriel": "clem@c.com",
         "mdp": "$2b$08$3AD38SgJdmuAWaBiPenf8OJKuj9nUcMbyVZnusBjDa2rEoOgfzCQq",
         "panier": {
-            "valeur": 9.99,
+            "valeur": 1128.21,
             "items": [
                 {
                     "id": 0,
@@ -192,7 +192,79 @@
                     "nomProduit": "Tu vas tout réussir",
                     "descriptionProduit": "2-3 drop dans ton drink et BOOM t'es hulk",
                     "prix": 9.99,
-                    "quantite": 1
+                    "quantite": 2
+                },
+                {
+                    "id": 2,
+                    "idProduit": 9,
+                    "nomProduit": "Smoke me",
+                    "descriptionProduit": "Bon work out maintenant respire ma douce fumé :))",
+                    "prix": 42,
+                    "quantite": 2
+                },
+                {
+                    "id": 3,
+                    "idProduit": 11,
+                    "nomProduit": "Pu d'idées",
+                    "descriptionProduit": "j'ai pu d'idées",
+                    "prix": 2.5,
+                    "quantite": 4
+                },
+                {
+                    "id": 4,
+                    "idProduit": 6,
+                    "nomProduit": "Big bras, big coeur",
+                    "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
+                    "prix": 64.66,
+                    "quantite": 2
+                },
+                {
+                    "id": 5,
+                    "idProduit": 5,
+                    "nomProduit": "Des wiggily",
+                    "descriptionProduit": "wiggily, wiggily , WIGGILY!!!",
+                    "prix": 77.65,
+                    "quantite": 6
+                },
+                {
+                    "id": 6,
+                    "idProduit": 7,
+                    "nomProduit": "Beautééééééé",
+                    "descriptionProduit": "oui oui c'est toi ça",
+                    "prix": 36.78,
+                    "quantite": 6
+                },
+                {
+                    "id": 7,
+                    "idProduit": 8,
+                    "nomProduit": "Moi",
+                    "descriptionProduit": "Moi",
+                    "prix": 44.78,
+                    "quantite": 2
+                },
+                {
+                    "id": 8,
+                    "idProduit": 3,
+                    "nomProduit": "oui oui",
+                    "descriptionProduit": "Tu vas workout avec ça!!",
+                    "prix": 14.99,
+                    "quantite": 5
+                },
+                {
+                    "id": 9,
+                    "idProduit": 4,
+                    "nomProduit": "Pas de pitié!",
+                    "descriptionProduit": "Jte jure tu vas work mon chum",
+                    "prix": 6.58,
+                    "quantite": 4
+                },
+                {
+                    "id": 10,
+                    "idProduit": 10,
+                    "nomProduit": "Big Bras",
+                    "descriptionProduit": "good job here's a cookie",
+                    "prix": 2.5,
+                    "quantite": 3
                 }
             ]
         },
@@ -844,5 +916,109 @@
                 "date": "2021-12-02T21:00:44.986Z"
             }
         ]
+    },
+    {
+        "id": 9,
+        "prenom": "a",
+        "nom": "a",
+        "age": 54,
+        "adresse": "a",
+        "pays": "a",
+        "courriel": "m@m.com",
+        "mdp": "$2b$08$yQJL5f8hxpim/FmROFqtxuTdWs.frXdPBCiuvswshRjMhjfzjb.Yq",
+        "panier": {
+            "valeur": 34.94,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 2,
+                    "nomProduit": "Allez hop direct dans le gosier, ça part",
+                    "descriptionProduit": "Tout est dit",
+                    "prix": 19.95,
+                    "quantite": 1
+                },
+                {
+                    "id": 1,
+                    "idProduit": 3,
+                    "nomProduit": "oui oui",
+                    "descriptionProduit": "Tu vas workout avec ça!!",
+                    "prix": 14.99,
+                    "quantite": 1
+                }
+            ]
+        },
+        "historique": []
+    },
+    {
+        "id": 10,
+        "prenom": "a",
+        "nom": "a",
+        "age": 4,
+        "adresse": "a",
+        "pays": "a",
+        "courriel": "o@o.com",
+        "mdp": "$2b$08$Vp7BflOVPGoNj2PhklM1tOssIXgzjCeLrGBOTbQlkmhllcSxM92DK",
+        "panier": {
+            "valeur": 762.8600000000001,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 4,
+                    "nomProduit": "Pas de pitié!",
+                    "descriptionProduit": "Jte jure tu vas work mon chum",
+                    "prix": 6.58,
+                    "quantite": 2
+                },
+                {
+                    "id": 1,
+                    "idProduit": 11,
+                    "nomProduit": "Pu d'idées",
+                    "descriptionProduit": "j'ai pu d'idées",
+                    "prix": 2.5,
+                    "quantite": 2
+                },
+                {
+                    "id": 2,
+                    "idProduit": 8,
+                    "nomProduit": "Moi",
+                    "descriptionProduit": "Moi",
+                    "prix": 44.78,
+                    "quantite": 6
+                },
+                {
+                    "id": 3,
+                    "idProduit": 6,
+                    "nomProduit": "Big bras, big coeur",
+                    "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
+                    "prix": 64.66,
+                    "quantite": 2
+                },
+                {
+                    "id": 4,
+                    "idProduit": 10,
+                    "nomProduit": "Big Bras",
+                    "descriptionProduit": "good job here's a cookie",
+                    "prix": 2.5,
+                    "quantite": 3
+                },
+                {
+                    "id": 5,
+                    "idProduit": 7,
+                    "nomProduit": "Beautééééééé",
+                    "descriptionProduit": "oui oui c'est toi ça",
+                    "prix": 36.78,
+                    "quantite": 5
+                },
+                {
+                    "id": 6,
+                    "idProduit": 5,
+                    "nomProduit": "Des wiggily",
+                    "descriptionProduit": "wiggily, wiggily , WIGGILY!!!",
+                    "prix": 77.65,
+                    "quantite": 2
+                }
+            ]
+        },
+        "historique": []
     }
 ]

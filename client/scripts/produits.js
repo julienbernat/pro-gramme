@@ -19,7 +19,6 @@ function genererProduit(data, prixMin, prixMax) {
     if(element.prix >= prixMin && element.prix <= prixMax){
       if(element.categorie.id == 1){
         innerHTMLpreWorkout +=
-            '<div class="produitIndiv">'+
             '<article class="prod-item">' +
             "<h1>" +
             element.nom +
@@ -34,8 +33,9 @@ function genererProduit(data, prixMin, prixMax) {
             "<p>Quantité restant : " +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier('+element.id+')">Ajouter au panier</button>'+
-            '</div>';
+            '<button onclick="ajouteraupanier(' +
+            element.id +
+            ')">Ajouter au panier</button>';
         innerHTMLpreWorkout +="</article>";
       }
       else if(element.categorie.id == 2){
@@ -102,7 +102,6 @@ function genererProduit(data, prixMin, prixMax) {
         innerHTMLautre +="</article>";
       }
     }
-
   }
   preWorkout.innerHTML = innerHTMLpreWorkout;
   prots.innerHTML = innerHTMLprots;
