@@ -19,6 +19,7 @@ function genererProduit(data, prixMin, prixMax) {
     if(element.prix >= prixMin && element.prix <= prixMax){
       if(element.categorie.id == 1){
         innerHTMLpreWorkout +=
+            '<div class="produitIndiv">'+
             '<article class="prod-item">' +
             "<h1>" +
             element.nom +
@@ -33,9 +34,8 @@ function genererProduit(data, prixMin, prixMax) {
             "<p>Quantité restant : " +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier(' +
-            element.id +
-            ')">Ajouter au panier</button>';
+            '<button onclick="ajouteraupanier('+element.id+')">Ajouter au panier</button>'+
+            '</div>';
         innerHTMLpreWorkout +="</article>";
       }
       else if(element.categorie.id == 2){
@@ -182,9 +182,15 @@ function ajouteraupanier(idProduit) {
       console.log(err);
     });
 }
-function close_clip(idToClose){
+function close_clip(idToClose, idimage){
   const preWorkout = document.getElementById(idToClose);
+  const img = document.getElementById(idimage);
   preWorkout.classList.toggle('cache');
+  if(preWorkout.classList.contains('cache')){
+    img.src = "images/arrow_down.png"
+  }else{
+    img.src = "images/arrow_up.png"
+  }
 }
 
 async function recherche(idtext, prixMin, prixMax){

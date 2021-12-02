@@ -5,7 +5,7 @@
         "nom": "Tu vas tout réussir",
         "description": "2-3 drop dans ton drink et BOOM t'es hulk",
         "prix": 9.99,
-        "qte_inventaire": 31,
+        "qte_inventaire": 28,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -18,7 +18,7 @@
         "nom": "Allez hop direct dans le gosier, ça part",
         "description": "Tout est dit",
         "prix": 19.95,
-        "qte_inventaire": 22,
+        "qte_inventaire": 17,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -31,7 +31,7 @@
         "nom": "oui oui",
         "description": "Tu vas workout avec ça!!",
         "prix": 14.99,
-        "qte_inventaire": 44,
+        "qte_inventaire": 40,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",

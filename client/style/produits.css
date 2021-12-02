@@ -61,8 +61,7 @@ input[type=number] {
 }
 
 .reduceSizeImageToHide{
-  height: 25px;
-  width: 25px;
+  width: 20px;
 }
 
 .buttonHideProduct{
@@ -87,4 +86,14 @@ input[type=number] {
   width: 65%;
   background-color: #444444;
   color: honeydew;
+}
+
+.produitIndiv{
+  animation: color-change 1s;
+}
+@keyframes color-change {
+  0% { color: gray; }
+  50%{color: darkgray}
+  75% { color: lightgray; }
+  100% { color: white; }
 }
