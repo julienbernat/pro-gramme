@@ -21,7 +21,7 @@ function genererConfirmation(data) {
     "</p>" +
     "</article>" +
     '<div class="accueil">' +
-    `<button onclick=${window.location.href}'=#/'` +
+    '<button onclick="window.location.href=`#/`"' +
     'type="button">Accueil</button>' +
     "</div>";
 
