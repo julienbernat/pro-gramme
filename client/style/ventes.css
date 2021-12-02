@@ -1,0 +1,66 @@
+#button {
+  position: absolute;
+  right: 20%;
+}
+
+#panier-grille {
+  display: flex;
+  flex-direction: column;
+}
+
+.panier-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+}
+
+.panier-item h1 {
+  font-size: x-large;
+  margin: 0 0 15px;
+}
+
+.nomEtDes{
+  border: 1px solid black;
+}
+
+.prixPosition{
+  margin:auto;
+}
+
+.panier-item h2 {
+  font-size: medium;
+  text-align: left;
+}
+
+.panier-item input {
+  font-size: medium;
+  text-align: left;
+  align-items: center;
+}
+
+.panier-item p {
+  text-align: left;
+}
+
+#header {
+  background-color: var(--fond-menu, #000);
+  padding-top: 4px;
+}
+
+.barre-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+}
+
+.barre-header h2 {
+  float: left;
+  font-size: 16px;
+  color: var(--couleur-menu);
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.sectionPrincipalPanier{
+  margin-left: 20%;
+  margin-right: 20%;
+}
