@@ -85,10 +85,28 @@ input[type=number] {
   margin-bottom: 10px;
   width: 65%;
   background-color: #444444;
-  color: honeydew;
+  color: white;
+}
+
+#submitResearch:hover{
+  color: salmon;
 }
 
 .produitIndiv{
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+
+  background-color: white;
+}
+
+.produitIndiv:hover{
+  background-color: #222233;
+  cursor: pointer;
+}
+
+.textProduitPanier{
   animation: color-change 1s;
 }
 @keyframes color-change {
@@ -96,4 +114,13 @@ input[type=number] {
   50%{color: darkgray}
   75% { color: lightgray; }
   100% { color: white; }
+}
+
+.ajoutePanier{
+  font-size: large;
+  color: white;
+}
+
+.titreProduits{
+  cursor: pointer;
 }

@@ -19,7 +19,7 @@ function genererProduit(data, prixMin, prixMax) {
     if(element.prix >= prixMin && element.prix <= prixMax){
       if(element.categorie.id == 1){
         innerHTMLpreWorkout +=
-            '<article class="prod-item">' +
+            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
             "<h1>" +
             element.nom +
             "</h1>" +
@@ -30,17 +30,19 @@ function genererProduit(data, prixMin, prixMax) {
             element.prix +
             "$" +
             "</h2>" +
-            "<p>Quantité restant : " +
+            '<div class="sameLineParent">' +
+            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier(' +
-            element.id +
-            ')">Ajouter au panier</button>';
+            '<p class="sameLineChildren ajoutePanier">'+
+            "Ajouter au panier" +
+            '</p>' +
+            '</div>';
         innerHTMLpreWorkout +="</article>";
       }
       else if(element.categorie.id == 2){
         innerHTMLprots +=
-            '<article class="prod-item">' +
+            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
             "<h1>" +
             element.nom +
             "</h1>" +
@@ -51,17 +53,19 @@ function genererProduit(data, prixMin, prixMax) {
             element.prix +
             "$" +
             "</h2>" +
-            "<p>Quantité restant : " +
+            '<div class="sameLineParent">' +
+            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier(' +
-            element.id +
-            ')">Ajouter au panier</button>';
+            '<p class="sameLineChildren ajoutePanier">'+
+            "Ajouter au panier" +
+            '</p>' +
+            '</div>';
         innerHTMLprots +="</article>";
       }
       else if(element.categorie.id == 3){
         innerHTMLpostWorkout +=
-            '<article class="prod-item">' +
+            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
             "<h1>" +
             element.nom +
             "</h1>" +
@@ -72,17 +76,19 @@ function genererProduit(data, prixMin, prixMax) {
             element.prix +
             "$" +
             "</h2>" +
-            "<p>Quantité restant : " +
+            '<div class="sameLineParent">' +
+            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier(' +
-            element.id +
-            ')">Ajouter au panier</button>';
+            '<p class="sameLineChildren ajoutePanier">'+
+            "Ajouter au panier" +
+            '</p>' +
+            '</div>';
         innerHTMLpostWorkout +="</article>";
       }
       else if(element.categorie.id == 4){
         innerHTMLautre +=
-            '<article class="prod-item">' +
+            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
             "<h1>" +
             element.nom +
             "</h1>" +
@@ -93,12 +99,14 @@ function genererProduit(data, prixMin, prixMax) {
             element.prix +
             "$" +
             "</h2>" +
-            "<p>Quantité restant : " +
+            '<div class="sameLineParent">' +
+            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
             element.qte_inventaire +
             "</p>" +
-            '<button onclick="ajouteraupanier(' +
-            element.id +
-            ')">Ajouter au panier</button>';
+            '<p class="sameLineChildren ajoutePanier">'+
+            "Ajouter au panier" +
+            '</p>' +
+            '</div>';
         innerHTMLautre +="</article>";
       }
     }
@@ -171,6 +179,7 @@ function ajouteraupanier(idProduit) {
     .then((json) => {
       if (typeof json === "object" && json !== null) {
         console.log("Reussi");
+        chrgePanier();
         afficherMessage("Ajouter au panier", "positif");
       } else {
         console.log(json);
@@ -210,5 +219,34 @@ async function recherche(idtext, prixMin, prixMax){
       .then((data) => genererProduit(data, prixmin, prixmax));
     openAllProducts();
 
+  }
+}
+
+
+function chrgePanier() {
+  const init = {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer: ${window.usager.token}`,
+    },
+  };
+  fetch("./clients/" + window.usager.id + "/panier", init)
+      .then((produits) => {
+        return produits.json();
+      })
+      .then((data) => regardePanier(data));
+}
+
+function regardePanier(data){
+  var nombeElemntDif = 0;
+  for (let indice in data.items) {
+    let element = data.items[indice];
+    nombeElemntDif = nombeElemntDif + 1;
+  }
+  if(nombeElemntDif > 0){
+    document.getElementById('panier').innerHTML = "Panier ("+ nombeElemntDif +") ";
+  } else{
+    document.getElementById('panier').innerHTML = "Panier";
   }
 }

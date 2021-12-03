@@ -184,7 +184,7 @@
         "courriel": "clem@c.com",
         "mdp": "$2b$08$3AD38SgJdmuAWaBiPenf8OJKuj9nUcMbyVZnusBjDa2rEoOgfzCQq",
         "panier": {
-            "valeur": 1128.21,
+            "valeur": 1917.63,
             "items": [
                 {
                     "id": 0,
@@ -208,7 +208,7 @@
                     "nomProduit": "Pu d'idées",
                     "descriptionProduit": "j'ai pu d'idées",
                     "prix": 2.5,
-                    "quantite": 4
+                    "quantite": 15
                 },
                 {
                     "id": 4,
@@ -232,7 +232,7 @@
                     "nomProduit": "Beautééééééé",
                     "descriptionProduit": "oui oui c'est toi ça",
                     "prix": 36.78,
-                    "quantite": 6
+                    "quantite": 26
                 },
                 {
                     "id": 7,
@@ -256,7 +256,7 @@
                     "nomProduit": "Pas de pitié!",
                     "descriptionProduit": "Jte jure tu vas work mon chum",
                     "prix": 6.58,
-                    "quantite": 4
+                    "quantite": 8
                 },
                 {
                     "id": 10,
@@ -959,66 +959,141 @@
         "courriel": "o@o.com",
         "mdp": "$2b$08$Vp7BflOVPGoNj2PhklM1tOssIXgzjCeLrGBOTbQlkmhllcSxM92DK",
         "panier": {
-            "valeur": 762.8600000000001,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 4,
-                    "nomProduit": "Pas de pitié!",
-                    "descriptionProduit": "Jte jure tu vas work mon chum",
-                    "prix": 6.58,
-                    "quantite": 2
-                },
-                {
-                    "id": 1,
-                    "idProduit": 11,
-                    "nomProduit": "Pu d'idées",
-                    "descriptionProduit": "j'ai pu d'idées",
-                    "prix": 2.5,
-                    "quantite": 2
-                },
-                {
-                    "id": 2,
-                    "idProduit": 8,
-                    "nomProduit": "Moi",
-                    "descriptionProduit": "Moi",
-                    "prix": 44.78,
-                    "quantite": 6
-                },
-                {
-                    "id": 3,
-                    "idProduit": 6,
-                    "nomProduit": "Big bras, big coeur",
-                    "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
-                    "prix": 64.66,
-                    "quantite": 2
-                },
-                {
-                    "id": 4,
-                    "idProduit": 10,
-                    "nomProduit": "Big Bras",
-                    "descriptionProduit": "good job here's a cookie",
-                    "prix": 2.5,
-                    "quantite": 3
-                },
-                {
-                    "id": 5,
-                    "idProduit": 7,
-                    "nomProduit": "Beautééééééé",
-                    "descriptionProduit": "oui oui c'est toi ça",
-                    "prix": 36.78,
-                    "quantite": 5
-                },
-                {
-                    "id": 6,
-                    "idProduit": 5,
-                    "nomProduit": "Des wiggily",
-                    "descriptionProduit": "wiggily, wiggily , WIGGILY!!!",
-                    "prix": 77.65,
-                    "quantite": 2
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
-        "historique": []
+        "historique": [
+            {
+                "id": 36,
+                "idClient": 10,
+                "montant": 640.2099999999999,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 6,
+                        "nomProduit": "Big bras, big coeur",
+                        "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
+                        "prix": 64.66,
+                        "quantite": 2
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 11,
+                        "nomProduit": "Pu d'idées",
+                        "descriptionProduit": "j'ai pu d'idées",
+                        "prix": 2.5,
+                        "quantite": 2
+                    },
+                    {
+                        "id": 3,
+                        "idProduit": 4,
+                        "nomProduit": "Pas de pitié!",
+                        "descriptionProduit": "Jte jure tu vas work mon chum",
+                        "prix": 6.58,
+                        "quantite": 2
+                    },
+                    {
+                        "id": 4,
+                        "idProduit": 7,
+                        "nomProduit": "Beautééééééé",
+                        "descriptionProduit": "oui oui c'est toi ça",
+                        "prix": 36.78,
+                        "quantite": 10
+                    },
+                    {
+                        "id": 5,
+                        "idProduit": 10,
+                        "nomProduit": "Big Bras",
+                        "descriptionProduit": "good job here's a cookie",
+                        "prix": 2.5,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 6,
+                        "idProduit": 8,
+                        "nomProduit": "Moi",
+                        "descriptionProduit": "Moi",
+                        "prix": 44.78,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 7,
+                        "idProduit": 5,
+                        "nomProduit": "Des wiggily",
+                        "descriptionProduit": "wiggily, wiggily , WIGGILY!!!",
+                        "prix": 77.65,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2021-12-03T21:09:11.801Z"
+            },
+            {
+                "id": 37,
+                "idClient": 10,
+                "montant": 217.46,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 4,
+                        "nomProduit": "Pas de pitié!",
+                        "descriptionProduit": "Jte jure tu vas work mon chum",
+                        "prix": 6.58,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 6,
+                        "nomProduit": "Big bras, big coeur",
+                        "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
+                        "prix": 64.66,
+                        "quantite": 2
+                    },
+                    {
+                        "id": 2,
+                        "idProduit": 7,
+                        "nomProduit": "Beautééééééé",
+                        "descriptionProduit": "oui oui c'est toi ça",
+                        "prix": 36.78,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 3,
+                        "idProduit": 8,
+                        "nomProduit": "Moi",
+                        "descriptionProduit": "Moi",
+                        "prix": 44.78,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2021-12-03T21:09:26.991Z"
+            },
+            {
+                "id": 38,
+                "idClient": 10,
+                "montant": 71.24,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 6,
+                        "nomProduit": "Big bras, big coeur",
+                        "descriptionProduit": "si t'as l'un des deux t'as pas besoin des deux",
+                        "prix": 64.66,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 4,
+                        "nomProduit": "Pas de pitié!",
+                        "descriptionProduit": "Jte jure tu vas work mon chum",
+                        "prix": 6.58,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2021-12-03T21:19:06.303Z"
+            }
+        ]
     }
 ]

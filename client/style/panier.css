@@ -1,7 +1,20 @@
 #button {
   position: absolute;
   right: 20%;
+  margin-top: 15px;
+  background-color: grey;
+  width: 13%;
+  height: 5%;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  cursor: pointer;
 }
+#button:hover{
+  background-color: salmon;
+}
+
 
 #panier-grille {
   display: flex;
@@ -10,20 +23,22 @@
 
 .panier-item {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  border-bottom: solid black 1px;
 }
 
 .panier-item h1 {
   font-size: x-large;
   margin: 0 0 15px;
 }
-
-.nomEtDes{
-  border: 1px solid black;
-}
-
 .prixPosition{
-  margin:auto;
+  margin:20px;
+  width: 45px;
+}
+.supprimePosition{
+  margin:20px;
+  cursor: pointer;
 }
 
 .panier-item h2 {
@@ -48,7 +63,7 @@
 
 .barre-header {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr;
 }
 
 .barre-header h2 {
@@ -61,6 +76,6 @@
 }
 
 .sectionPrincipalPanier{
-  margin-left: 20%;
+  margin-left: 30%;
   margin-right: 20%;
 }

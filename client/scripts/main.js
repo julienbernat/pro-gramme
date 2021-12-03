@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btnDeconnexion.addEventListener('click', function() {
         window.usager = null;
         inverserConnexion();
+        resetPanier();
     });
     const btnConnexion = document.getElementById('btn-connexion');
     btnConnexion.addEventListener('click', function() {
@@ -61,10 +62,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     expire: expire
                 };
                 inverserConnexion();
+                chrgePanier();
             });
     });
 }, false);
 
+function resetPanier(){
+    document.getElementById('panier').innerHTML = "Panier";
+}
 
 
 

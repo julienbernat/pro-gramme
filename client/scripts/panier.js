@@ -25,22 +25,22 @@ function genererPanier(data) {
         element.id + ',' + element.quantite + ',this)"/>' +
       "</ul>" +
       "<ul>" +
-      "<h2>Prix : " +
+      "<h2 class=\"prixPosition\">Prix : " +
       element.prix +
       "$" +
       "</h2>" +
       "</ul>" +
       "<ul>" +
-      "<h2>Total : " +
+      "<h2 class=\"prixPosition\">Total : " +
       (element.prix * element.quantite).toFixed(2) +
       "$" +
       "</h2>" +
       "</ul>" +
       "<ul>" +
-      '<button onclick="supprimerproduit(' +
+      '<button class="supprimePosition" onclick="supprimerproduit(' +
       element.idProduit +
       ')">' +
-      '<i class="material-icons">delete</i>' +
+      '<i class="material-icons" style="float: left"  >delete</i>' +
       "</button>";
     "</ul>" + "</article>";
 
@@ -48,7 +48,7 @@ function genererPanier(data) {
   }
 
   total.innerHTML =
-    '<article class="panier-item">' +
+    '<article class="panier-item" style="height: 80px;">' +
     "<ul>" +
     "</ul>" +
     "<ul>" +
@@ -60,8 +60,8 @@ function genererPanier(data) {
     "</ul>" +
     "<ul>" +
     "<h2>" +
-    data.valeur.toFixed(2) +
-    `$ (${quantitetotal} articles)`;
+    data.valeur.toFixed(2)  +
+    `$ <br> (${quantitetotal} articles)`;
   "$" + "</h2>" + "</ul>" + "</article>";
 
 }
@@ -84,6 +84,7 @@ function supprimerproduit(id) {
     })
     .then((json) => {
       if (typeof json === "object" && json !== null) {
+        chrgePanier();
         chargerpanier();
       } else {
         console.log(json);

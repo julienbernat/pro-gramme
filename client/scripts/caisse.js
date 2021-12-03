@@ -1,5 +1,5 @@
 function envoyer() {
-  const formulaire = new FormData(document.getElementById("formulaire-caisse"));
+  const formulaire = new FormData(document.getElementById("formulaireCaisse"));
   const corps = Object.fromEntries(formulaire);
   console.log({ corps });
   const body = { idClient: window.usager.id };
