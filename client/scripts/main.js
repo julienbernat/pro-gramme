@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.usager = null;
         inverserConnexion();
         resetPanier();
+        resetMenu();
     });
     const btnConnexion = document.getElementById('btn-connexion');
     btnConnexion.addEventListener('click', function() {
@@ -61,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     token: json.token,
                     expire: expire
                 };
+                if(formulaire.get('courriel') == "admin2@admin.com"){
+                    changeMainMenuForEmploye();
+                }
+                    console.log(window.usager.courriel);
                 inverserConnexion();
                 chrgePanier();
             });
@@ -71,6 +76,22 @@ function resetPanier(){
     document.getElementById('panier').innerHTML = "Panier";
 }
 
+function changeMainMenuForEmploye(){
+    const mainMenu = document.getElementById('menuPrincipalClients');
+    mainMenu.classList.toggle('cache');
+    const menuEmploy = document.getElementById('menuEmploye');
+    menuEmploy.classList.toggle('cache');
+
+}
+
+function resetMenu(){
+    const mainMenu = document.getElementById('menuPrincipalClients');
+    if(mainMenu.classList.contains('cache')){
+        mainMenu.classList.toggle('cache');
+        const menuEmploy = document.getElementById('menuEmploye');
+        menuEmploy.classList.toggle('cache');
+    }
+}
 
 
 

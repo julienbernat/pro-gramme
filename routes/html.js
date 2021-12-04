@@ -37,4 +37,8 @@ router.get("/confirmation", function (req, res) {
   res.sendFile(path.join(__dirname + "/../client/confirmation.html"));
 });
 
+router.get("/ventes", function (req, res) {
+  res.sendFile(path.join(__dirname + "/../client/ventes.html"));
+});
+
 module.exports = router;

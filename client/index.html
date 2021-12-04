@@ -34,18 +34,18 @@
             <form id="form-connexion" class="cache">
                 <div class="groupe-connexion">
                     <label for="courriel">Courriel</label>
-                    <input value="o@o.com" type="email" id="courriel" name="courriel" required />
+                    <input value="admin2@admin.com" type="email" id="courriel" name="courriel" required />
                 </div>
                 <div class="groupe-connexion">
                     <label for="mdp">Mot de passe</label>
-                    <input value="o" type="password" id="mdp" name="mdp" required />
+                    <input value="admin" type="password" id="mdp" name="mdp" required />
                 </div>
                 <button id="btn-submit-connexion" type="button">Se connecter</button>
             </form>
         </div>
     </div>
-        <div id="menu-principal">
-            <div class="barre-menu">
+        <div class="menu-principal" >
+            <div class="barre-menu" id="menuPrincipalClients">
                 <a href="#/" >Accueil</a>
                 <a href="#/produits">Produits</a>
                 <div class="deroulant"><button class="btn-deroulant">À propos</button>
@@ -55,6 +55,9 @@
                     </div>
                 </div>
                 <a id="panier"href="#/panier">Panier</a>
+            </div>
+            <div class="barre-menu cache" id="menuEmploye">
+                <a href="#/ventes" >Commandes</a>
             </div>
         </div>
     </nav>

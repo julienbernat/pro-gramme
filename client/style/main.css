@@ -19,7 +19,7 @@ nav {
   text-align: center;
 }
 
-#menu-principal {
+.menu-principal {
   background-color: var(--fond-menu, #000);
   padding-top: 4px;
 }

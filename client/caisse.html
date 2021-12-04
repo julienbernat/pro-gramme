@@ -1,56 +1,65 @@
+<body onload="pourChargerResumePanier()">
 <link rel="stylesheet" href="style/caisse.css">
 <h1 id="para-1" class="centrer">Caisse</h1>
-    <form id="formulaireCaisse">
-        <div class="adresse">
-            <div>
-                <label class="labelAdresse" for="prenom">Prénom*: </label>
-                <input class="inputAdresse" type="text" name="prenom" id="prenom" required/>
-            </div>
-            <div>
-                <label class="labelAdresse"  for="nom">Nom*: </label>
-                <input class="inputAdresse" type="text" name="nom" id="nom" required/>
-            </div>
-            <div>
-                <label class="labelAdresse"  for="numero">Numéro de téléphone*: </label>
-                <input class="inputAdresse" name="numero" id="numero" required/>
-            </div>
-            <div></div>
-            <div>
-                <label class="labelAdresse"  for="adresse">Adresse*: </label>
-                <input class="inputAdresse" type="adresse" name="adresse" id="adresse" required/>
-            </div>
-            <div>
-                <label class="labelAdresse"  for="ville">Ville*: </label>
-                <input class="inputAdresse" type="ville" name="ville" id="ville" required/>
-            </div>
-            <div>
-                <label class="labelAdresse"  for="province">Province*: </label>
-                <input class="inputAdresse" type="province" name="province" id="province" required/>
-            </div>
-            <div>
-                <label class="labelAdresse"  for="codepostal">Code Postal*: </label>
-                <input class="inputAdresse" type="codepostal" name="codepostal" id="codepostal" required/>
+    <div class="sameLineParent">
+        <div class="sameLineChildren">
+        <form id="formulaireCaisse">
+            <div class="adresse">
+                <div>
+                    <label class="labelAdresse" for="prenom">Prénom*: </label>
+                    <input class="inputAdresse" type="text" name="prenom" id="prenom" required/>
+                </div>
+                <div>
+                    <label class="labelAdresse"  for="nom">Nom*: </label>
+                    <input class="inputAdresse" type="text" name="nom" id="nom" required/>
+                </div>
+                <div>
+                    <label class="labelAdresse"  for="numero">Numéro de téléphone*: </label>
+                    <input class="inputAdresse" name="numero" id="numero" required/>
+                </div>
+                <div></div>
+                <div>
+                    <label class="labelAdresse"  for="adresse">Adresse*: </label>
+                    <input class="inputAdresse" type="adresse" name="adresse" id="adresse" required/>
+                </div>
+                <div>
+                    <label class="labelAdresse"  for="ville">Ville*: </label>
+                    <input class="inputAdresse" type="ville" name="ville" id="ville" required/>
+                </div>
+                <div>
+                    <label class="labelAdresse"  for="province">Province*: </label>
+                    <input class="inputAdresse" type="province" name="province" id="province" required/>
+                </div>
+                <div>
+                    <label class="labelAdresse"  for="codepostal">Code Postal*: </label>
+                    <input class="inputAdresse" type="codepostal" name="codepostal" id="codepostal" required/>
+                </div>
+
             </div>
 
-        </div>
+            <div class="adresse" style="margin-top: 20px">
+                <div>
+                    <label class="labelAdresse" for="nomcarte">Nom carte de crédit*: </label>
+                    <input class="inputAdresse" type="nomcarte" id="nomcarte" name="nomcarte" required>
+                </div>
+                <div>
+                    <label class="labelAdresse" for="dateexpiration">Date d'expiration*: </label>
+                    <input class="inputAdresse" type="dateexpiration" id="dateexpiration" name="dateexpiration" required>
+                </div>
+                <div>
+                    <label class="labelAdresse" for="cvv">CVV*:</label>
+                    <input class="inputAdresse" type="cvv" id="cvv" name="cvv" required>
+                </div>
+            </div>
 
-        <div class="adresse" style="margin-top: 20px">
-            <div>
-                <label class="labelAdresse" for="nomcarte">Nom sur la carte de crédit*: </label>
-                <input class="inputAdresse" type="nomcarte" id="nomcarte" name="nomcarte" required>
+            <div class="sameLineParent">
+                <button class="sameLineChildren revenir" onclick="window.location.href='#/panier'"  type="button">Revenir</button>
+                <button class="sameLineChildren envoyer" id="btn-envoyer" type="button">Envoyer</button>
             </div>
-            <div>
-                <label class="labelAdresse" for="dateexpiration">Date d'expiration*: </label>
-                <input class="inputAdresse" type="dateexpiration" id="dateexpiration" name="dateexpiration" required>
-            </div>
-            <div>
-                <label class="labelAdresse" for="cvv">CVV*:</label>
-                <input class="inputAdresse" type="cvv" id="cvv" name="cvv" required>
-            </div>
+        </form>
         </div>
-
-        <div class="sameLineParent">
-            <button class="sameLineChildren revenir" onclick="window.location.href='#/panier'"  type="button">Revenir</button>
-            <button class="sameLineChildren envoyer" id="btn-envoyer" type="button">Envoyer</button>
+        <!-- Résumer de la commande -->
+        <div class="resumerCommandeWindow sameLineChildren" id="resumerCommande">
+            <!-- Items vont là -->
         </div>
-    </form>
+    </div>
