@@ -1,54 +1,27 @@
-#button {
-  position: absolute;
-  right: 20%;
-}
-
-#panier-grille {
-  display: flex;
-  flex-direction: column;
-}
-
-.panier-item {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
-}
-
-.panier-item h1 {
-  font-size: x-large;
-  margin: 0 0 15px;
-}
-
-.nomEtDes{
-  border: 1px solid black;
-}
-
-.prixPosition{
-  margin:auto;
-}
-
-.panier-item h2 {
-  font-size: medium;
-  text-align: left;
-}
-
-.panier-item input {
-  font-size: medium;
-  text-align: left;
-  align-items: center;
-}
-
-.panier-item p {
-  text-align: left;
-}
-
-#header {
+#top {
   background-color: var(--fond-menu, #000);
   padding-top: 4px;
 }
 
+.sectionPrincipalPanier{
+  margin-top: 1%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
 .barre-header {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+}
+
+
+.commandeIndividuel {
+  border: solid black 2px;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+  background-color: lightgray;
 }
 
 .barre-header h2 {
@@ -60,7 +33,61 @@
   transition: color 0.5s, background-color 0.5s;
 }
 
-.sectionPrincipalPanier{
-  margin-left: 20%;
-  margin-right: 20%;
+.idcommande{
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
 }
+
+.nomProduits{
+  margin-left: 35%;
+}
+
+.quantiteProduits{
+  text-align: center;
+}
+
+.adresse{
+  margin-bottom: auto;
+  margin-top: auto;
+  text-align: center;
+}
+
+.enleverventer{
+  height: 20px;
+  width: 20px;
+  margin: auto;
+
+}
+
+.entreProduits{
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

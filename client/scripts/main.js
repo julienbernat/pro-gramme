@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnSeConnecter = document.getElementById('btn-submit-connexion');
     btnSeConnecter.addEventListener('click', function() {
         const formulaire = new FormData(document.getElementById('form-connexion'));
+
         const corps = JSON.stringify(Object.fromEntries(formulaire));
         const init = {
             method: 'POST',
@@ -64,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 };
                 if(formulaire.get('courriel') == "admin2@admin.com"){
                     changeMainMenuForEmploye();
+                    window.usager.role = 'admin';
+                    window.usager.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM4NjQzNjY2LCJleHAiOjE2Mzg2NTA4NjZ9.ee-4cCHMlbJ9FjBHFqfBGHMa3oNghgBoxIb7cCbkjeQ';
                 }
-                    console.log(window.usager.courriel);
                 inverserConnexion();
                 chrgePanier();
             });

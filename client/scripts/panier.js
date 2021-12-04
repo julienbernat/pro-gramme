@@ -141,12 +141,12 @@ function chargerpanier() {
     method: "GET",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      Authorization: `Bearer: ${window.usager.token}`,
+      Authorization: `Bearer: ${window.usager.token}`
     },
   };
   fetch("./clients/" + window.usager.id + "/panier", init)
-    .then((produits) => {
-      return produits.json();
-    })
-    .then((data) => genererPanier(data));
+      .then((produits) => {
+        return produits.json();
+      })
+      .then((data) => genererPanier(data));
 }

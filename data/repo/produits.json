@@ -5,7 +5,7 @@
         "nom": "oui oui",
         "description": "Tu vas workout avec ça!!",
         "prix": 14.99,
-        "qte_inventaire": 10,
+        "qte_inventaire": 13,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -18,7 +18,7 @@
         "nom": "Pas de pitié!",
         "description": "Jte jure tu vas work mon chum",
         "prix": 6.58,
-        "qte_inventaire": 23,
+        "qte_inventaire": 27,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -44,7 +44,7 @@
         "nom": "Big bras, big coeur",
         "description": "si t'as l'un des deux t'as pas besoin des deux",
         "prix": 64.66,
-        "qte_inventaire": 14,
+        "qte_inventaire": 20,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -57,7 +57,7 @@
         "nom": "Beautééééééé",
         "description": "oui oui c'est toi ça",
         "prix": 36.78,
-        "qte_inventaire": 48,
+        "qte_inventaire": 59,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -70,7 +70,7 @@
         "nom": "Moi",
         "description": "Moi",
         "prix": 44.78,
-        "qte_inventaire": 44,
+        "qte_inventaire": 46,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -83,7 +83,7 @@
         "nom": "Big Bras",
         "description": "good job here's a cookie",
         "prix": 2.5,
-        "qte_inventaire": 43,
+        "qte_inventaire": 44,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -96,7 +96,7 @@
         "nom": "Pu d'idées",
         "description": "j'ai pu d'idées",
         "prix": 2.5,
-        "qte_inventaire": 33,
+        "qte_inventaire": 36,
         "categorie": {
             "id": 4,
             "nom": "Autre",
