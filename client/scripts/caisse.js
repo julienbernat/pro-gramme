@@ -1,37 +1,74 @@
 function envoyer() {
-  const formulaire = new FormData(document.getElementById("formulaireCaisse"));
-  const corps = Object.fromEntries(formulaire);
-  console.log({ corps });
-  const body = { idClient: window.usager.id };
-  const init = {
-    method: "POST",
-    body: JSON.stringify(body),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-      Authorization: `Bearer: ${window.usager.token}`,
-    },
-  };
-  fetch("/ventes", init)
-    .then((reponse) => {
-      if (reponse.ok) {
-        return reponse.json();
-      } else {
-        return reponse.text();
-      }
-    })
-    .then((json) => {
-      if (typeof json === "object" && json !== null) {
-        window.confirmation = json;
-        window.location.href = "/#/confirmation";
-        console.log("Reussi");
-      } else {
-        console.log(json);
-        afficherMessage(`Erreur: ${json}`, "negatif");
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  const prenom = document.getElementById("prenom");
+  const nom = document.getElementById("nom");
+  const numero = document.getElementById("numero");
+  const adresse = document.getElementById("adresse");
+  const ville = document.getElementById("ville");
+  const province = document.getElementById("province");
+  const codepostal = document.getElementById("codepostal");
+  const nomcarte = document.getElementById("nomcarte");
+  const dateexpiration = document.getElementById("dateexpiration");
+  const cvv = document.getElementById("cvv");
+  const numCarte = document.getElementById("numCarte");
+
+  if(prenom.value == "")
+    afficherMessage("Vous devez mettre un prénom", "negatif");
+  else if(nom.value == "")
+    afficherMessage("Vous devez mettre un nom", "negatif");
+  else if(numero.value == "")
+    afficherMessage("Vous devez mettre un numero de téléphone", "negatif");
+  else if(adresse.value == "")
+    afficherMessage("Vous devez mettre une adresse", "negatif");
+  else if(ville.value == "")
+    afficherMessage("Vous devez mettre une ville", "negatif");
+  else if(province.value == "")
+    afficherMessage("Vous devez mettre une province", "negatif");
+  else if(codepostal.value == "")
+    afficherMessage("Vous devez mettre un codepostal", "negatif");
+  else if(nomcarte.value == "")
+    afficherMessage("Vous devez mettre un nom de carte de crédit", "negatif");
+  else if(dateexpiration.value == "")
+    afficherMessage("Vous devez mettre unw date d'expiration", "negatif");
+  else if(cvv.value == "")
+    afficherMessage("Vous devez mettre un cvv", "negatif");
+  else if(numCarte.value == "")
+    afficherMessage("Vous devez mettre un numéro de carte", "negatif");
+  else{
+    const formulaire = new FormData(document.getElementById("formulaireCaisse"));
+    const corps = Object.fromEntries(formulaire);
+    console.log({ corps });
+    const body = { idClient: window.usager.id };
+    const init = {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: `Bearer: ${window.usager.token}`,
+      },
+    };
+    fetch("/ventes", init)
+        .then((reponse) => {
+          if (reponse.ok) {
+            return reponse.json();
+          } else {
+            return reponse.text();
+          }
+        })
+        .then((json) => {
+          if (typeof json === "object" && json !== null) {
+            window.confirmation = json;
+            window.location.href = "/#/confirmation";
+            chrgePanier();
+            console.log("Reussi");
+          } else {
+            console.log(json);
+            afficherMessage(`Erreur: ${json}`, "negatif");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+  }
 }
 
 /**

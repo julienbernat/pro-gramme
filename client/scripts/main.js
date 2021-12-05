@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         inverserConnexion();
         resetPanier();
         resetMenu();
+        window.location.href='#/'
     });
     const btnConnexion = document.getElementById('btn-connexion');
     btnConnexion.addEventListener('click', function() {
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(formulaire.get('courriel') == "admin2@admin.com"){
                     changeMainMenuForEmploye();
                     window.usager.role = 'admin';
-                    window.usager.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM4NjQzNjY2LCJleHAiOjE2Mzg2NTA4NjZ9.ee-4cCHMlbJ9FjBHFqfBGHMa3oNghgBoxIb7cCbkjeQ';
+                    window.usager.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM4NjUyOTA1LCJleHAiOjE2Mzg2NjAxMDV9.bm2KHN8RXC1CnTW1vMAkNvWAPIA9bXXpYAOCDJ5DwIc';
                 }
                 inverserConnexion();
                 chrgePanier();

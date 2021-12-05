@@ -16,98 +16,102 @@ function genererProduit(data, prixMin, prixMax) {
   let innerHTMLautre = "";
   for (let indice in data) {
     let element = data[indice];
-    if(element.prix >= prixMin && element.prix <= prixMax){
-      if(element.categorie.id == 1){
-        innerHTMLpreWorkout +=
-            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
-            "<h1>" +
-            element.nom +
-            "</h1>" +
-            "<address>" +
-            element.description +
-            "</address>" +
-            "<h2>Prix : " +
-            element.prix +
-            "$" +
-            "</h2>" +
-            '<div class="sameLineParent">' +
-            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
-            element.qte_inventaire +
-            "</p>" +
-            '<p class="sameLineChildren ajoutePanier">'+
-            "Ajouter au panier" +
-            '</p>' +
-            '</div>';
-        innerHTMLpreWorkout +="</article>";
-      }
-      else if(element.categorie.id == 2){
-        innerHTMLprots +=
-            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
-            "<h1>" +
-            element.nom +
-            "</h1>" +
-            "<address>" +
-            element.description +
-            "</address>" +
-            "<h2>Prix : " +
-            element.prix +
-            "$" +
-            "</h2>" +
-            '<div class="sameLineParent">' +
-            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
-            element.qte_inventaire +
-            "</p>" +
-            '<p class="sameLineChildren ajoutePanier">'+
-            "Ajouter au panier" +
-            '</p>' +
-            '</div>';
-        innerHTMLprots +="</article>";
-      }
-      else if(element.categorie.id == 3){
-        innerHTMLpostWorkout +=
-            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
-            "<h1>" +
-            element.nom +
-            "</h1>" +
-            "<address>" +
-            element.description +
-            "</address>" +
-            "<h2>Prix : " +
-            element.prix +
-            "$" +
-            "</h2>" +
-            '<div class="sameLineParent">' +
-            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
-            element.qte_inventaire +
-            "</p>" +
-            '<p class="sameLineChildren ajoutePanier">'+
-            "Ajouter au panier" +
-            '</p>' +
-            '</div>';
-        innerHTMLpostWorkout +="</article>";
-      }
-      else if(element.categorie.id == 4){
-        innerHTMLautre +=
-            '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
-            "<h1>" +
-            element.nom +
-            "</h1>" +
-            "<address>" +
-            element.description +
-            "</address>" +
-            "<h2>Prix : " +
-            element.prix +
-            "$" +
-            "</h2>" +
-            '<div class="sameLineParent">' +
-            '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
-            element.qte_inventaire +
-            "</p>" +
-            '<p class="sameLineChildren ajoutePanier">'+
-            "Ajouter au panier" +
-            '</p>' +
-            '</div>';
-        innerHTMLautre +="</article>";
+    let quantiteInv = Number(element.qte_inventaire) - 1;
+    if(quantiteInv > 0){
+
+      if(element.prix >= prixMin && element.prix <= prixMax){
+        if(element.categorie.id == 1){
+          innerHTMLpreWorkout +=
+              '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
+              "<h1>" +
+              element.nom +
+              "</h1>" +
+              "<address>" +
+              element.description +
+              "</address>" +
+              "<h2>Prix : " +
+              element.prix +
+              "$" +
+              "</h2>" +
+              '<div class="sameLineParent">' +
+              '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
+              quantiteInv +
+              "</p>" +
+              '<p class="sameLineChildren ajoutePanier">'+
+              "Ajouter au panier" +
+              '</p>' +
+              '</div>';
+          innerHTMLpreWorkout +="</article>";
+        }
+        else if(element.categorie.id == 2){
+          innerHTMLprots +=
+              '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
+              "<h1>" +
+              element.nom +
+              "</h1>" +
+              "<address>" +
+              element.description +
+              "</address>" +
+              "<h2>Prix : " +
+              element.prix +
+              "$" +
+              "</h2>" +
+              '<div class="sameLineParent">' +
+              '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
+              quantiteInv +
+              "</p>" +
+              '<p class="sameLineChildren ajoutePanier">'+
+              "Ajouter au panier" +
+              '</p>' +
+              '</div>';
+          innerHTMLprots +="</article>";
+        }
+        else if(element.categorie.id == 3){
+          innerHTMLpostWorkout +=
+              '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
+              "<h1>" +
+              element.nom +
+              "</h1>" +
+              "<address>" +
+              element.description +
+              "</address>" +
+              "<h2>Prix : " +
+              element.prix +
+              "$" +
+              "</h2>" +
+              '<div class="sameLineParent">' +
+              '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
+              quantiteInv +
+              "</p>" +
+              '<p class="sameLineChildren ajoutePanier">'+
+              "Ajouter au panier" +
+              '</p>' +
+              '</div>';
+          innerHTMLpostWorkout +="</article>";
+        }
+        else if(element.categorie.id == 4){
+          innerHTMLautre +=
+              '<article class="prod-item produitIndiv" onclick="ajouteraupanier(' + element.id + ')">' +
+              "<h1>" +
+              element.nom +
+              "</h1>" +
+              "<address>" +
+              element.description +
+              "</address>" +
+              "<h2>Prix : " +
+              element.prix +
+              "$" +
+              "</h2>" +
+              '<div class="sameLineParent">' +
+              '<p class="sameLineChildren" style="float: left">Quantité restante : ' +
+              quantiteInv +
+              "</p>" +
+              '<p class="sameLineChildren ajoutePanier">'+
+              "Ajouter au panier" +
+              '</p>' +
+              '</div>';
+          innerHTMLautre +="</article>";
+        }
       }
     }
   }

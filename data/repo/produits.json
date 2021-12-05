@@ -1,37 +1,76 @@
 [
     {
-        "id": 3,
+        "id": 0,
         "serial": "sdfds",
-        "nom": "oui oui",
-        "description": "Tu vas workout avec ça!!",
-        "prix": 14.99,
-        "qte_inventaire": 13,
+        "nom": "Poudre blanche",
+        "description": "Idéal pour les entrainement de courte durée.",
+        "prix": 7.89,
+        "qte_inventaire": 30,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
             "description": "des produits de pre-Workout"
+        }
+    },
+    {
+        "id": 1,
+        "serial": "sdfds",
+        "nom": "Poudre sans nom",
+        "description": "Poudre de qualité à des prix compétitifs.",
+        "prix": 5.45,
+        "qte_inventaire": 30,
+        "categorie": {
+            "id": 1,
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
+        }
+    },
+    {
+        "id": 2,
+        "serial": "sdfds",
+        "nom": "Poudre cafféiné",
+        "description": "Poudre à base de café. Très efficace pour des entrainements de longue durée",
+        "prix": 15.62,
+        "qte_inventaire": 38,
+        "categorie": {
+            "id": 1,
+            "nom": "PreWorkout",
+            "description": "des produits de pre-Workout"
+        }
+    },
+    {
+        "id": 3,
+        "serial": "sdfds",
+        "nom": "Proteines Grand P",
+        "description": "Proteines à base de plante",
+        "prix": 28.95,
+        "qte_inventaire": 9,
+        "categorie": {
+            "id": 2,
+            "nom": "proteines",
+            "description": "Des proteines"
         }
     },
     {
         "id": 4,
         "serial": "sdfds",
-        "nom": "Pas de pitié!",
-        "description": "Jte jure tu vas work mon chum",
-        "prix": 6.58,
-        "qte_inventaire": 27,
+        "nom": "Proteines chococo",
+        "description": "Proteines à base de chocolat. Petite quantité de poudre dans le pot",
+        "prix": 13.9,
+        "qte_inventaire": 19,
         "categorie": {
-            "id": 1,
-            "nom": "PreWorkout",
-            "description": "des produits de pre-Workout"
+            "id": 2,
+            "nom": "proteines",
+            "description": "Des proteines"
         }
     },
     {
         "id": 5,
         "serial": "sdfds",
-        "nom": "Des wiggily",
-        "description": "wiggily, wiggily , WIGGILY!!!",
-        "prix": 77.65,
-        "qte_inventaire": 39,
+        "nom": "Supppeeeerrrr",
+        "description": "Proteine fait à partir d'insecte. Si consommé en trop grande quantité peut être dangereux.",
+        "prix": 69.99,
+        "qte_inventaire": 21,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -41,10 +80,10 @@
     {
         "id": 6,
         "serial": "sdfds",
-        "nom": "Big bras, big coeur",
-        "description": "si t'as l'un des deux t'as pas besoin des deux",
-        "prix": 64.66,
-        "qte_inventaire": 20,
+        "nom": "Proteine sans nom",
+        "description": "Peu chers et très efficace",
+        "prix": 12.3,
+        "qte_inventaire": 58,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -54,10 +93,10 @@
     {
         "id": 7,
         "serial": "sdfds",
-        "nom": "Beautééééééé",
-        "description": "oui oui c'est toi ça",
-        "prix": 36.78,
-        "qte_inventaire": 59,
+        "nom": "Prots au four",
+        "description": "Proteine nouvelle génération. Fait à partir de soya.",
+        "prix": 94.33,
+        "qte_inventaire": 17,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -67,23 +106,10 @@
     {
         "id": 8,
         "serial": "sdfds",
-        "nom": "Moi",
-        "description": "Moi",
-        "prix": 44.78,
-        "qte_inventaire": 46,
-        "categorie": {
-            "id": 2,
-            "nom": "proteines",
-            "description": "Des proteines"
-        }
-    },
-    {
-        "id": 10,
-        "serial": "sdfds",
-        "nom": "Big Bras",
-        "description": "good job here's a cookie",
-        "prix": 2.5,
-        "qte_inventaire": 44,
+        "nom": "Post poudre",
+        "description": "Pour les work out qui ont été spécialement difficile.",
+        "prix": 33.29,
+        "qte_inventaire": 15,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -91,12 +117,51 @@
         }
     },
     {
-        "id": 11,
+        "id": 9,
         "serial": "sdfds",
-        "nom": "Pu d'idées",
-        "description": "j'ai pu d'idées",
-        "prix": 2.5,
-        "qte_inventaire": 36,
+        "nom": "Post P.",
+        "description": "Pour une récuppération sans parallèle.",
+        "prix": 10.29,
+        "qte_inventaire": 96,
+        "categorie": {
+            "id": 3,
+            "nom": "PostWorkout",
+            "description": "Des produits de post-workout"
+        }
+    },
+    {
+        "id": 10,
+        "serial": "sdfds",
+        "nom": "Poudre du lendemain",
+        "description": "Pour pas prendre de chance. Pour ne rien laisser au hasard.",
+        "prix": 69.52,
+        "qte_inventaire": 15,
+        "categorie": {
+            "id": 3,
+            "nom": "PostWorkout",
+            "description": "Des produits de post-workout"
+        }
+    },
+    {
+        "id": 12,
+        "serial": "sdfds",
+        "nom": "Kit familial",
+        "description": "Du matériel d'entrainement pour tous les ages. Idéal pour des entrainements en famille.",
+        "prix": 650.36,
+        "qte_inventaire": 1,
+        "categorie": {
+            "id": 4,
+            "nom": "Autre",
+            "description": "Des produits autre"
+        }
+    },
+    {
+        "id": 13,
+        "serial": "sdfds",
+        "nom": "Tapis",
+        "description": "Pour un bon repos ou un petit workout",
+        "prix": 25.54,
+        "qte_inventaire": 43,
         "categorie": {
             "id": 4,
             "nom": "Autre",

@@ -16,6 +16,8 @@
   border: none;
   background-color: #444444;
   color: white;
+  width: 80px;
+  height: 40px;
   -webkit-transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out;

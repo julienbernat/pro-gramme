@@ -19,10 +19,9 @@ function genererPanier(data) {
       "</address>" +
       "</ul>" +
       "<ul>" +
-      '<input class="prixPosition" value=' +
-      element.quantite +
-      ' type="number" min="1" required onchange="changerquantite(' +
-        element.id + ',' + element.quantite + ',this)"/>' +
+        '<input onchange= changerquantite(' + element.id + ',' + element.quantite + ',this) class="prixPosition"' +
+        ' type="number" value="'+ element.quantite + '" size="2" min="1">' +
+
       "</ul>" +
       "<ul>" +
       "<h2 class=\"prixPosition\">Prix : " +
@@ -43,8 +42,6 @@ function genererPanier(data) {
       '<i class="material-icons" style="float: left"  >delete</i>' +
       "</button>";
     "</ul>" + "</article>";
-
-    console.log(element.id);
   }
 
   total.innerHTML =
@@ -64,6 +61,9 @@ function genererPanier(data) {
     `$ <br> (${quantitetotal} articles)`;
   "$" + "</h2>" + "</ul>" + "</article>";
 
+  if(quantitetotal < 1){
+    document.getElementById("passer-a-la-caisse").style.display = 'none';
+  }
 }
 
 function supprimerproduit(id) {
@@ -96,7 +96,7 @@ function supprimerproduit(id) {
     });
 }
 
-function changerquantite(id, anciennequantite, input) {;
+function changerquantite(id, anciennequantite, input) {
   const nouvellequantite = input.value;
   if (nouvellequantite < 1) {
     afficherMessage(
@@ -115,7 +115,7 @@ function changerquantite(id, anciennequantite, input) {;
       Authorization: `Bearer: ${window.usager.token}`,
     },
   };
-  fetch(`./clients/${window.usager.id}/panier/${id}`, init)
+  fetch("./clients/" + window.usager.id + "/panier/" + id, init)
     .then((reponse) => {
       if (reponse.ok) {
         return reponse.json();
