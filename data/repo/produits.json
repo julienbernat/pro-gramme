@@ -5,7 +5,7 @@
         "nom": "Poudre blanche",
         "description": "Idéal pour les entrainement de courte durée.",
         "prix": 7.89,
-        "qte_inventaire": 28,
+        "qte_inventaire": 29,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -18,7 +18,7 @@
         "nom": "Poudre sans nom",
         "description": "Poudre de qualité à des prix compétitifs.",
         "prix": 5.45,
-        "qte_inventaire": 26,
+        "qte_inventaire": 27,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -31,7 +31,7 @@
         "nom": "Poudre cafféiné",
         "description": "Poudre à base de café. Très efficace pour des entrainements de longue durée",
         "prix": 15.62,
-        "qte_inventaire": 35,
+        "qte_inventaire": 36,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
