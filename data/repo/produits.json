@@ -5,7 +5,7 @@
         "nom": "Poudre blanche",
         "description": "Idéal pour les entrainement de courte durée.",
         "prix": 7.89,
-        "qte_inventaire": 30,
+        "qte_inventaire": 28,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -18,7 +18,7 @@
         "nom": "Poudre sans nom",
         "description": "Poudre de qualité à des prix compétitifs.",
         "prix": 5.45,
-        "qte_inventaire": 28,
+        "qte_inventaire": 26,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -31,7 +31,7 @@
         "nom": "Poudre cafféiné",
         "description": "Poudre à base de café. Très efficace pour des entrainements de longue durée",
         "prix": 15.62,
-        "qte_inventaire": 38,
+        "qte_inventaire": 35,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -44,7 +44,7 @@
         "nom": "Proteines Grand P",
         "description": "Proteines à base de plante",
         "prix": 28.95,
-        "qte_inventaire": 9,
+        "qte_inventaire": 15,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -109,7 +109,7 @@
         "nom": "Post poudre",
         "description": "Pour les work out qui ont été spécialement difficile.",
         "prix": 33.29,
-        "qte_inventaire": 15,
+        "qte_inventaire": 14,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -122,7 +122,7 @@
         "nom": "Post P.",
         "description": "Pour une récuppération sans parallèle.",
         "prix": 10.29,
-        "qte_inventaire": 96,
+        "qte_inventaire": 95,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -135,7 +135,7 @@
         "nom": "Poudre du lendemain",
         "description": "Pour pas prendre de chance. Pour ne rien laisser au hasard.",
         "prix": 69.52,
-        "qte_inventaire": 15,
+        "qte_inventaire": 14,
         "categorie": {
             "id": 3,
             "nom": "PostWorkout",
@@ -148,7 +148,7 @@
         "nom": "Kit familial",
         "description": "Du matériel d'entrainement pour tous les ages. Idéal pour des entrainements en famille.",
         "prix": 650.36,
-        "qte_inventaire": 1,
+        "qte_inventaire": 4,
         "categorie": {
             "id": 4,
             "nom": "Autre",
