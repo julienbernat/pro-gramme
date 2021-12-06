@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(formulaire.get('courriel') == "admin2@admin.com"){
                     changeMainMenuForEmploye();
                     window.usager.role = 'admin';
-                    window.usager.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM4NjUyOTA1LCJleHAiOjE2Mzg2NjAxMDV9.bm2KHN8RXC1CnTW1vMAkNvWAPIA9bXXpYAOCDJ5DwIc';
+                    window.usager.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM4NzUyNDkxLCJleHAiOjE2Mzg3NTk2OTF9.jFZh7do-Irv5CQXa7ap_RZFbta6XhDLCgbS9oPa7__Q';
                 }
                 inverserConnexion();
                 chrgePanier();
@@ -80,18 +80,14 @@ function resetPanier(){
 }
 
 function changeMainMenuForEmploye(){
-    const mainMenu = document.getElementById('menuPrincipalClients');
-    mainMenu.classList.toggle('cache');
     const menuEmploy = document.getElementById('menuEmploye');
     menuEmploy.classList.toggle('cache');
 
 }
 
 function resetMenu(){
-    const mainMenu = document.getElementById('menuPrincipalClients');
-    if(mainMenu.classList.contains('cache')){
-        mainMenu.classList.toggle('cache');
-        const menuEmploy = document.getElementById('menuEmploye');
+    const menuEmploy = document.getElementById('menuEmploye');
+    if(!menuEmploy.classList.contains('cache')){
         menuEmploy.classList.toggle('cache');
     }
 }
