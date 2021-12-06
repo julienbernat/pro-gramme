@@ -29,10 +29,10 @@ function envoyer() {
     afficherMessage("Vous devez mettre un nom de carte de crédit", "negatif");
   else if(dateexpiration.value == "")
     afficherMessage("Vous devez mettre unw date d'expiration", "negatif");
-  else if(cvv.value == "")
-    afficherMessage("Vous devez mettre un cvv", "negatif");
-  else if(numCarte.value == "")
-    afficherMessage("Vous devez mettre un numéro de carte", "negatif");
+  else if(cvv.value == "" || Number(cvv.value) < 100)
+    afficherMessage("Vous devez remplir le cvv avec 3 chiffres", "negatif");
+  else if(numCarte.value == "" || Number(numCarte.value) < 1000000000000000)
+    afficherMessage("Vous devez mettre un numéro de carte valide de 16 chiffres", "negatif");
   else{
     const formulaire = new FormData(document.getElementById("formulaireCaisse"));
     const corps = Object.fromEntries(formulaire);

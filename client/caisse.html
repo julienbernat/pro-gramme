@@ -40,15 +40,15 @@
             <div class="adresse" style="margin-top: 20px">
                 <div>
                     <label class="labelAdresse" for="numCarte">Numéro carte*:</label>
-                    <input class="inputAdresse" id="numCarte" name="numCarte" required>
+                    <input class="inputAdresse"  type="number" max="9999999999999999" id="numCarte" name="numCarte" required>
                 </div>
                 <div>
                     <label class="labelAdresse" for="nomcarte">Nom carte de crédit*: </label>
-                    <input class="inputAdresse" type="number" max="9999999999999999" id="nomcarte" name="nomcarte" required>
+                    <input class="inputAdresse" id="nomcarte" name="nomcarte" required>
                 </div>
                 <div>
-                    <label class="labelAdresse" for="dateexpiration">Date d'expiration*: </label>
-                    <input class="inputAdresse"  id="dateexpiration" name="dateexpiration" required>
+                    <label class="labelAdresse" for="dateexpiration">Date d'expiration* <br> (MM/AA): </label>
+                    <input class="inputAdresse" style="margin-top: -20px"  id="dateexpiration" name="dateexpiration" required>
                 </div>
                 <div>
                     <label class="labelAdresse" for="cvv">CVV*:</label>
