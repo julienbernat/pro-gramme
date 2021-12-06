@@ -18,7 +18,7 @@
         "nom": "Poudre sans nom",
         "description": "Poudre de qualité à des prix compétitifs.",
         "prix": 5.45,
-        "qte_inventaire": 29,
+        "qte_inventaire": 28,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",

@@ -9,8 +9,17 @@
         "courriel": "admin2@admin.com",
         "mdp": "$2b$08$dMJ5vV.pdTjPtvtfpPYxqO7.pdd1D93CgpHvYQu7JlG4UGdFSVA9e",
         "panier": {
-            "valeur": 0,
-            "items": []
+            "valeur": 5.45,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 1,
+                    "nomProduit": "Poudre sans nom",
+                    "descriptionProduit": "Poudre de qualité à des prix compétitifs.",
+                    "prix": 5.45,
+                    "quantite": 1
+                }
+            ]
         },
         "historique": []
     },
