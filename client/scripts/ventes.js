@@ -1,7 +1,5 @@
 
 function chargerventes() {
-  console.log("here");
-
   const init = {
     method: "GET",
     headers: {
