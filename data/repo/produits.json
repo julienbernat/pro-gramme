@@ -31,7 +31,7 @@
         "nom": "Poudre cafféiné",
         "description": "Poudre à base de café. Très efficace pour des entrainements de longue durée",
         "prix": 15.62,
-        "qte_inventaire": 37,
+        "qte_inventaire": 38,
         "categorie": {
             "id": 1,
             "nom": "PreWorkout",
@@ -57,7 +57,7 @@
         "nom": "Proteines chococo",
         "description": "Proteines à base de chocolat. Petite quantité de poudre dans le pot",
         "prix": 13.9,
-        "qte_inventaire": 18,
+        "qte_inventaire": 19,
         "categorie": {
             "id": 2,
             "nom": "proteines",
@@ -70,7 +70,7 @@
         "nom": "Supppeeeerrrr",
         "description": "Proteine fait à partir d'insecte. Si consommé en trop grande quantité peut être dangereux.",
         "prix": 69.99,
-        "qte_inventaire": 20,
+        "qte_inventaire": 21,
         "categorie": {
             "id": 2,
             "nom": "proteines",
